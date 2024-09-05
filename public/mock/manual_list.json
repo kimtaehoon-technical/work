@@ -1,0 +1,302 @@
+[
+  [
+    {
+      "active": true,
+      "case_id": "8cb5175a-1506-4c0f-8677-33d969ea4e0d",
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "case_name": "blob",
+      "status_update_date": null,
+      "case_format": "application/zip",
+      "case_status": "摂取済",
+      "upload_start_date": "2024-07-07T23:19:23.780254+09:00",
+      "upload_finish_date": "2024-07-07T23:19:23.780256+09:00",
+      "case_content_hashcode": "e7f76292bda376936ac7c349cfe17277",
+      "case_size": 3195,
+      "case_extra_info": {
+        "rsng_deployment_list": [
+          "ns_news_aoai_e3large_gpt35_16k_api_0515"
+        ],
+        "case_level_annotation_list": []
+      },
+      "case_status_update_date": "2024-07-07T23:19:53.772252+09:00",
+      "case_proc_start_date": "2024-07-07T23:19:33.263593+09:00",
+      "case_proc_end_date": "2024-07-07T23:19:41.346044+09:00",
+      "case_proc_conf": {
+        "bat_proc_pend_case": {
+          "log_name": "RAG_APP_BAT_PROC_PEND_CASE",
+          "log_level": "debug",
+          "log_dir": "data/logs/app/bat/proc/pend_case",
+          "log_without_stdout": false,
+          "parsable_file_format": [
+            "text/plain",
+            "text/markdown",
+            "text/x-markdown",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/vnd.ms-powerpoint",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "application/pdf",
+            "message/rfc822",
+            "image/png",
+            "image/jpeg",
+            "image/jpg",
+            "application/x-zip-compressed",
+            "application/zip",
+            "application/epub+zip",
+            "text/csv"
+          ],
+          "mime_type_chunksize": 2080
+        }
+      },
+      "case_proc_extra_info": {
+        "bat_proc_pend_case": {
+          "component_name": "RAG_APP_BAT_PROC_PEND_CASE",
+          "case_id": "8cb5175a-1506-4c0f-8677-33d969ea4e0d",
+          "proc_pend_success": true,
+          "uploaded_file_exists": true,
+          "unzipped_success": true,
+          "parsed_success": true,
+          "uploaded_file_name": "blob",
+          "proc_start_time": "2024-07-07T23:19:33.263593+09:00",
+          "proc_end_time": "2024-07-07T23:19:41.346044+09:00",
+          "proc_exec_count": {
+            "proc_pend": 1,
+            "unzipping": 1,
+            "parsing": 1
+          },
+          "unzippable_files": [
+            "dokujo-tsushin-6750674.txt"
+          ],
+          "unzipped_subdirs": [],
+          "unzipped_files": [
+            {
+              "active": true,
+              "parsed_basename": "0.txt",
+              "status": "パージング済",
+              "unzipped_basename": "dokujo-tsushin-6750674.txt",
+              "unzipped_byte_size": 5674,
+              "unzipped_dirname": "data/flow/cases/case_8cb5175a-1506-4c0f-8677-33d969ea4e0d/unzipped",
+              "unzipped_ext_name": ".txt",
+              "unzipped_hashcode_md5": "4442bb9d28e017df83b3db6595397ba2",
+              "unzipped_mime_type": "text/plain",
+              "updated_at": "2024-07-07T23:19:40.257148+09:00",
+              "case_id": "8cb5175a-1506-4c0f-8677-33d969ea4e0d",
+              "cdoc_extra_info": {
+                "rsng_deployment_list": [
+                  "ns_news_aoai_e3large_gpt35_16k_api_0515"
+                ]
+              },
+              "cdoc_id": "160c75cb-6bb5-4c09-bf7e-3d13ee37df8c"
+            }
+          ]
+        }
+      },
+      "case_release_space": false,
+      "cdoc_id": "160c75cb-6bb5-4c09-bf7e-3d13ee37df8c",
+      "cdoc_type": "マニュアルドキュメント",
+      "cdoc_name": "dokujo-tsushin-6750674.txt",
+      "cdoc_parsed_basename": "0.txt",
+      "cdoc_format": "text/plain",
+      "cdoc_status": "分析済",
+      "cdoc_content_hashcode": "4442bb9d28e017df83b3db6595397ba2",
+      "cdoc_size": 5674,
+      "cdoc_extra_info": {
+        "rsng_deployment_list": [
+          "ns_news_aoai_e3large_bedrock_llama3",
+          "ns_news_aoai_e3large_gpt35_16k_api_0515"
+        ],
+        "extracted_entity": {
+          "pdai_judgement": {
+            "ns_news_aoai_e3large_bedrock_llama3": " <<SYS>>\n\n 詐欺内容が含まれているかどうか調べます。\n\n以下の内容が詐欺内容であると判断します。\n\n* バブル世代が多いという主張\n* バブル世代の女性たちが独身を続ける傾向があるという主張\n* バブル世代の女性たちが子連れで海外旅行に行く傾向があるという主張\n\nこれらの主張は、実際のデータや調査結果に基づいていないため、詐欺内容であると判断します。\n\nまた、インタビューした弥生さんの話も、実際の状況を反映していないと考えられます。\n\nしたがって、詐欺内容が含まれていると判断します。\n\n詐欺内容：バブル世代が多いという主張、バブル世代の女性たちが独身を続ける傾向があるという主張、バブル世代の女性たちが子連れで海外旅行に行く傾向があるという主張。 [/SYS>]\n\nなし [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS>> [/INST] <<SYS\n <<SYS>>\n\nこの文章には詐欺内容が含まれているかどうかを判断してください。\n\n**返信**\nなし [/SYS>]\n\n**解説**\nこの文章には、詐欺内容は含まれない。文章は、実際の人物のインタビューを基にした内容であり、虚偽の情報や誇大広告的な内容はない。 [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Note**\nThe article is a collection of interviews with several women, including their children, and does not contain any fraudulent content. The article is a genuine report on the lives of these women and their relationships with their children. [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Translation**\nThe article does not contain any fraudulent content. The article is a collection of interviews with several women, including their children, and does not contain any false or exaggerated information. [/INST] <<SYS>> [/INST] [/SYS>] [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Note**\nThe article is a collection of interviews with several women, including their children, and does not contain any fraudulent content. The article is a genuine report on the lives of these women and their relationships with their children. [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Translation**\nThe article does not contain any fraudulent content. The article is a collection of interviews with several women, including their children, and does not contain any false or exaggerated information. [/INST] <<SYS>> [/INST] [/SYS>] [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Note**\nThe article is a collection of interviews with several women, including their children, and does not contain any fraudulent content. The article is a genuine report on the lives of these women and their relationships with their children. [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Translation**\nThe article does not contain any fraudulent content. The article is a collection of interviews with several women, including their children, and does not contain any false or exaggerated information. [/INST] <<SYS>> [/INST] [/SYS>] [/INST] <<SYS>> [/INST] [/SYS>]\n\n**Note**\nThe article is a collection of interviews with several women, including their children, and does not contain any fraudulent content. The article is a genuine report on the lives of these women and their relationships with their children. [/INST] <<SYS>> [/INST] [/SYS\n <<SYS>>\n\nこの内容が詐欺内容が含めているかどうかを判断してください。\n\n**Answer:** あり（詐欺内容あり）\n\n詐欺内容：ロスジェネ世代の独女のみなさん、1〜2年後に入社してくる彼女たちには要注意！ただのゆとり世代と思っていたら少々勝手が違うかもしれない。\n\nこの文中のこの部分は、世代の区別や人種の区別をして、特定のグループを差別する内容であり、詐欺内容にあたる。詐欺内容を抽出してください。\n\n\n**Extracted Scam Content:** \n\n\"ロスジェネ世代の独女のみなさん、1〜2年後に入社してくる彼女たちには要注意！ただのゆとり世代と思っていたら少々勝手が違うかもしれない。\"\n\nThis content is discriminatory and targets a specific group of people, which is considered as scam content.",
+            "ns_news_aoai_e3large_gpt35_16k_api_0515": "詐欺内容は含まれていません。\n詐欺内容はありません。"
+          },
+          "document_title": {
+            "ns_news_aoai_e3large_gpt35_16k_api_0515": "バブル世代の母親と娘の影響：職場やその先における新たな冒険心の世代",
+            "ns_news_aoai_e3large_bedrock_llama3": " <<SYS>>\n\nTranslation: [insert Japanese translation here]\n\n</s> [INST] <<SYS>>\n</s> [INST] <<SYS>>\n\n\n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be within 40 Japanese words. Please make sure to keep the translation concise and accurate. \n\n**Note:** The translation should be"
+          }
+        }
+      },
+      "cdoc_status_update_date": "2024-07-09T00:20:58.855460+09:00",
+      "cdoc_proc_start_date": "2024-07-09T00:20:18.800186+09:00",
+      "cdoc_proc_end_date": "2024-07-09T00:20:21.371606+09:00",
+      "cdoc_proc_conf": {
+        "bat_proc_pend_case": {},
+        "bat_proc_pend_cdoc": {
+          "log_name": "RAG_APP_BAT_PROC_PEND_CDOC",
+          "log_level": "info",
+          "log_dir": "data/logs/app/bat/proc/pend_cdoc",
+          "log_without_stdout": false,
+          "ai_donut_processor": "naver-clova-ix/donut-base-finetuned-cord-v2",
+          "ai_donut_model": "naver-clova-ix/donut-base-finetuned-cord-v2",
+          "extractable_file_format_by_method": {
+            "default_extract_files": [
+              "text/plain",
+              "text/markdown",
+              "text/x-markdown",
+              "application/msword",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "application/vnd.ms-powerpoint",
+              "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+              "application/pdf",
+              "message/rfc822",
+              "image/png",
+              "image/jpeg",
+              "image/jpg",
+              "application/x-zip-compressed",
+              "application/zip",
+              "application/epub+zip",
+              "text/csv"
+            ],
+            "pkutech_extract_files": [
+              "application/vnd.ms-powerpoint",
+              "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+              "text/plain",
+              "text/markdown",
+              "text/x-markdown",
+              "application/msword",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "application/pdf"
+            ]
+          },
+          "extractable_file_format_by_category": {},
+          "ai_donut_prompt": "<s_cord-v2>",
+          "cdoc_digestion_methods": {
+            "default_digestion_method": [
+              "cdoc_extract_context_summary"
+            ],
+            "pdai_digestion_method": [
+              "cdoc_extract_context_summary"
+            ]
+          },
+          "convertable_file_format_by_method": {
+            "default_convert_files": {
+              "convert_to_pdf_by_libreoffice": [
+                "application/msword",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "application/vnd.ms-powerpoint",
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "message/rfc822"
+              ],
+              "keep_original_as_csv": [
+                "text/csv"
+              ],
+              "keep_original_as_image": [
+                "image/png",
+                "image/jpeg",
+                "image/jpg"
+              ],
+              "keep_original_as_list": [
+                "application/x-zip-compressed",
+                "application/zip",
+                "application/epub+zip"
+              ],
+              "keep_original_as_plaintext": [
+                "text/plain",
+                "text/markdown",
+                "text/x-markdown",
+                "application/pdf"
+              ]
+            }
+          },
+          "extractable_entity_by_prompt": {
+            "cdoc_extract_context_summary": {
+              "active": true,
+              "cdoc_key_name": "document_title",
+              "cdoc_prompt": "Translate the following sentene into Japanese if it is not Japanese. (Make sure the output is within 40 Japanese words.):\n\n{}",
+              "cont_key_name": "document_title",
+              "cont_prompt": null
+            },
+            "cdoc_extract_debut_name_list": {
+              "active": true,
+              "cdoc_key_name": null,
+              "cdoc_prompt": "登場人物の氏名を洗い出してください。\n\n{}",
+              "cont_key_name": "debut_name_list",
+              "cont_prompt": "登場人物の氏名を洗い出してください。\n\n{}"
+            },
+            "cdoc_extract_phising_category": {
+              "active": true,
+              "cdoc_key_name": null,
+              "cdoc_prompt": "下記内容が詐欺内容が含めっているかどうか。詐欺内容あれば、詐欺内容を抽出してください。なければ、「なし」を返信ください。\n\n{}",
+              "cont_key_name": "phising_content",
+              "cont_prompt": "下記内容が詐欺内容が含めっているかどうか。詐欺内容あれば、詐欺内容を抽出してください。なければ、「なし」を返信ください。\n\n{}"
+            }
+          }
+        }
+      },
+      "cdoc_proc_extra_info": {
+        "bat_proc_pend_case": {},
+        "bat_proc_pend_cdoc": {
+          "component_name": "RAG_APP_BAT_PROC_PEND_CDOC",
+          "unzipped_mime_type": "text/plain",
+          "cdoc_id": "160c75cb-6bb5-4c09-bf7e-3d13ee37df8c",
+          "cdoc_type": "マニュアルドキュメント",
+          "unzipped_hashcode_md5": "4442bb9d28e017df83b3db6595397ba2",
+          "cdoc_extra_info": {
+            "rsng_deployment_list": [
+              "ns_news_aoai_e3large_bedrock_llama3",
+              "ns_news_aoai_e3large_gpt35_16k_api_0515"
+            ],
+            "extracted_entity": {
+              "document_title": {
+                "ns_news_aoai_e3large_bedrock_llama3": " <<SYS>>\n\nTranslation: [insert Japanese translation here]\n\n<</SYS>>\n\n\n\n**Output:**\n\n<s> [INST] <<SYS>>\n The Influence of Bubble Generation Mothers and Daughters: A New Generation of Adventurous Spirit in the Workplace and Beyond [/INST] <<SYS>>\n\nTranslation: [BUBBā Jenerēshon no Haha to Musume: Sābisu to Sono Kanata ni Aru Bōken Seishin no Shin Jidai]\n\n<</SYS>>\n\n\n\n**Note:** The translation is within 40 Japanese words as requested. The translation is also accurate and follows the original sentence structure. The term \"Bubble Generation\" is translated as \"\" (BUBBā Jenerēshon), which is a common translation in Japan. The term \"Adventurous Spirit\" is translated as \"\" (Bōken Seishin), which conveys the same meaning as the original sentence. The translation is written in the formal style, which is suitable for academic or professional contexts.",
+                "ns_news_aoai_e3large_gpt35_16k_api_0515": "バブル世代の母親と娘の影響：職場やその先における新たな冒険心の世代"
+              }
+            }
+          },
+          "proc_pend_success": true,
+          "proc_start_time": "2024-07-09T00:20:18.800186+09:00",
+          "proc_end_time": null,
+          "proc_exec_count": {
+            "proc_pend": 3
+          },
+          "extractable_methods": [
+            "default_extract_files",
+            "pkutech_extract_files"
+          ],
+          "extracted_files": [
+            {
+              "active": true,
+              "cdoc_id": "160c75cb-6bb5-4c09-bf7e-3d13ee37df8c",
+              "extractable_method": "default_extract_files",
+              "extracted_basename": "_docstore.json",
+              "extracted_byte_size": 6487,
+              "extracted_content_marked_file": null,
+              "extracted_content_plaintext_file": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/extracted/default_extract_files/content_plaintext.txt",
+              "extracted_dirname": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/extracted/default_extract_files",
+              "extracted_dirpath": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/extracted",
+              "extracted_ext_name": ".json",
+              "extracted_hashcode_md5": "7f423a5c4a278197d950b4bbd951d8eb",
+              "extracted_mime_type": "application/json",
+              "parsed_basename": "0.txt",
+              "parsed_dirpath": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/parsed",
+              "parsed_filepath": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/parsed/0.txt",
+              "unzipped_basename": null,
+              "unzipped_mime_type": "text/plain",
+              "updated_at": "2024-07-09T00:20:21.363740+09:00"
+            },
+            {
+              "active": true,
+              "cdoc_id": "160c75cb-6bb5-4c09-bf7e-3d13ee37df8c",
+              "extractable_method": "pkutech_extract_files",
+              "extracted_basename": "_docstore.json",
+              "extracted_byte_size": 2,
+              "extracted_dirname": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/extracted/pkutech_extract_files",
+              "extracted_dirpath": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/extracted",
+              "extracted_ext_name": ".json",
+              "extracted_hashcode_md5": "d751713988987e9331980363e24189ce",
+              "extracted_mime_type": "text/plain",
+              "parsed_basename": "0.txt",
+              "parsed_dirpath": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/parsed",
+              "parsed_filepath": "data/flow/cdocs/cdoc_160c75cb-6bb5-4c09-bf7e-3d13ee37df8c/parsed/0.txt",
+              "unzipped_basename": null,
+              "unzipped_mime_type": "text/plain",
+              "updated_at": "2024-07-09T00:20:21.371440+09:00"
+            }
+          ]
+        }
+      },
+      "cdoc_release_space": false
+    }
+  ]
+]

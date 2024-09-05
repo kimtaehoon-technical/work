@@ -1,0 +1,8 @@
+/* the bounce effect in scrolling behavior is effectively disabled */
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

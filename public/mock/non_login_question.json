@@ -1,0 +1,131 @@
+[
+  [
+    {
+      "faq_id": "01c0711c-6eab-4651-9d2d-30e70d57ea7d",
+      "active": true,
+      "created_at": "2024-07-16T16:17:23.341429+09:00",
+      "updated_at": "2024-07-16T18:17:23.341429+09:00",
+      "api_user_code": "pkutech_bot",
+      "user_query": "要約してください。",
+      "sys_response_text": "- 日本の柔道家であり総合格闘家の吉田秀彦が引退試合興行「ASTRA」を開催することが発表された。\n- 吉田はバルセロナ五輪柔道金メダリストであり、2002年にプロ総合格闘家に転向した。\n- 引退試合の相手には、桜庭和志や朝青龍といった報道があったが、秋山成勲が吉田にメールで対戦を迫った。\n- 秋山は吉田にメールで対戦を打診し、自身のブログでその内容を明かした。\n- 階級の違いや現在の主戦場が異なるため、実際に対戦する可能性は低いが、秋山は吉田に対する尊敬とエールを送っていた。",
+      "sys_response_ref": [
+        {
+          "node": {
+            "id_": "4c82dad3-8511-4da6-943c-c6ae23eff09e",
+            "embedding": null,
+            "metadata": {
+              "cdoc_id": "1db4e9fa-7873-496f-a759-179c1938756f",
+              "unzipped_basename": "data/flow/cdocs/cdoc_1db4e9fa-7873-496f-a759-179c1938756f/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_1db4e9fa-7873-496f-a759-179c1938756f/parsed/0.txt",
+              "document_title": "秋山成勲、メールで吉田に対戦迫った！\nComprehensive Title: 秋山成勲が吉田との対戦をメールで迫った",
+              "section_summary": "The section discusses an article about a retired Japanese judoka and mixed martial artist, Hidehiko Yoshida, and his upcoming retirement match. It mentions that Yoshida received an email from another fighter, Shinya Aoki, expressing his desire to fight him. The section also highlights Aoki's admiration for Yoshida and his respect for his contributions to the sport."
+            },
+            "excluded_embed_metadata_keys": [],
+            "excluded_llm_metadata_keys": [],
+            "relationships": {
+              "1": {
+                "node_id": "1db4e9fa-7873-496f-a759-179c1938756f",
+                "node_type": "4",
+                "metadata": {
+                  "cdoc_id": "1db4e9fa-7873-496f-a759-179c1938756f",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_1db4e9fa-7873-496f-a759-179c1938756f/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_1db4e9fa-7873-496f-a759-179c1938756f/parsed/0.txt"
+                },
+                "hash": "917de86995ccffe0e41b285b20dc147f8b03f30c3142f2f8cd7b3c8aa4b86420"
+              }
+            },
+            "text": "http://news.livedoor.com/article/detail/4597641/\n\n2010\n\n02\n\n10T10:50:00+0900\n\n【Sports Watch】秋山成勲、メールで吉田に対戦迫った! ?\n\n今月8日、都内ホテルでは、総合格闘家・吉田秀彦の引退試合興行「ASTRA」の開催が発表された。\n\nバルセロナ五輪柔道金メダリストとしての実績を引っさげ、2002年にプロ総合格闘家に転向。以後、数々の死闘を繰り広げてきた吉田。昨年大晦日のDynamite! !では、石井慧との金メダリスト対決を制し、4月に迎える引退試合の相手には、桜庭和志やまさかの朝青龍といった報道が駆け巡る中、“反骨の柔道王”秋山成勲が吉田にメールで対戦を迫っていたというのだ。\n\n会見翌日の9日に更新された秋山成勲オフィシャルブログでは、「吉田秀彦対秋山成勲」と題し、「常に憧れ目標にしてきた吉田先輩が引退。正直寂しい気持ちはありますが、ほんまにお疲れ様でした！引退試合はもちろん自分とやるでしょ！？」とストレートに書き綴りながらも、「さっき吉田先輩にメールで自分とやるでしょ？的なメールを打って、軽く流されましたが」と、実際に吉田へ対戦を打診をしていたことを明かした。\n\nもちろん、階級が違う上、秋山は米UFCを主戦場にしている現状、対戦することはまずない。それでも、我が道を行き、空気を一切読まない秋山だけに、案外本気に考えていた可能性もなきにしもあらず——。そんなブログの最後には、「ほんまに柔道から格闘技の道を作って頂いたパイオニアだと自分は思い尊敬してます！引退試合頑張ってください！」と吉田にエールを送る秋山であった。",
+            "start_char_idx": 0,
+            "end_char_idx": 715,
+            "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+            "metadata_template": "{key}: {value}",
+            "metadata_seperator": "\n"
+          },
+          "score": 0.21934289288349917
+        },
+        {
+          "node": {
+            "id_": "82fbc418-3f41-4427-984a-b4fa22a4e990",
+            "embedding": null,
+            "metadata": {
+              "cdoc_id": "30d1e3dc-a374-4289-8321-de077d72522b",
+              "unzipped_basename": "data/flow/cdocs/cdoc_30d1e3dc-a374-4289-8321-de077d72522b/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_30d1e3dc-a374-4289-8321-de077d72522b/parsed/0.txt",
+              "document_title": "秋山成勲、メールで吉田に対戦迫った！\nComprehensive Title: 秋山成勲が吉田との対戦をメールで迫った",
+              "section_summary": "The section discusses an article about a retired Japanese judoka and mixed martial artist, Hidehiko Yoshida, and his upcoming retirement match. It mentions that Yoshida received an email from another fighter, Shinya Aoki, expressing his desire to fight him. The section also highlights Aoki's admiration for Yoshida and his respect for his contributions to the sport."
+            },
+            "excluded_embed_metadata_keys": [],
+            "excluded_llm_metadata_keys": [],
+            "relationships": {
+              "1": {
+                "node_id": "30d1e3dc-a374-4289-8321-de077d72522b",
+                "node_type": "4",
+                "metadata": {
+                  "cdoc_id": "30d1e3dc-a374-4289-8321-de077d72522b",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_30d1e3dc-a374-4289-8321-de077d72522b/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_30d1e3dc-a374-4289-8321-de077d72522b/parsed/0.txt"
+                },
+                "hash": "67fe7f9fdd89739bf4a0c7d75b1741bc30920fc5a6bf07268783d0e240cf7e5d"
+              }
+            },
+            "text": "http://news.livedoor.com/article/detail/4597641/\n\n2010\n\n02\n\n10T10:50:00+0900\n\n【Sports Watch】秋山成勲、メールで吉田に対戦迫った! ?\n\n今月8日、都内ホテルでは、総合格闘家・吉田秀彦の引退試合興行「ASTRA」の開催が発表された。\n\nバルセロナ五輪柔道金メダリストとしての実績を引っさげ、2002年にプロ総合格闘家に転向。以後、数々の死闘を繰り広げてきた吉田。昨年大晦日のDynamite! !では、石井慧との金メダリスト対決を制し、4月に迎える引退試合の相手には、桜庭和志やまさかの朝青龍といった報道が駆け巡る中、“反骨の柔道王”秋山成勲が吉田にメールで対戦を迫っていたというのだ。\n\n会見翌日の9日に更新された秋山成勲オフィシャルブログでは、「吉田秀彦対秋山成勲」と題し、「常に憧れ目標にしてきた吉田先輩が引退。正直寂しい気持ちはありますが、ほんまにお疲れ様でした！引退試合はもちろん自分とやるでしょ！？」とストレートに書き綴りながらも、「さっき吉田先輩にメールで自分とやるでしょ？的なメールを打って、軽く流されましたが」と、実際に吉田へ対戦を打診をしていたことを明かした。\n\nもちろん、階級が違う上、秋山は米UFCを主戦場にしている現状、対戦することはまずない。それでも、我が道を行き、空気を一切読まない秋山だけに、案外本気に考えていた可能性もなきにしもあらず——。そんなブログの最後には、「ほんまに柔道から格闘技の道を作って頂いたパイオニアだと自分は思い尊敬してます！引退試合頑張ってください！」と吉田にエールを送る秋山であった。",
+            "start_char_idx": 0,
+            "end_char_idx": 715,
+            "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+            "metadata_template": "{key}: {value}",
+            "metadata_seperator": "\n"
+          },
+          "score": 0.21746627271979502
+        }
+      ],
+      "deployment_tag": "rag_aoai_ada2_gpt35_16k__api_0515",
+      "deployment_conf": {
+        "IngestionMethod": "default_extract_files",
+        "SentenceSplitter_chunk_overlap": 20,
+        "SentenceSplitter_chunk_size": 1024,
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embed_3large1",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "docdb_database_name": "db_rag_dev_pku_{}",
+        "ingestion_config": {
+          "IngestionPipeline_num_workers": 1,
+          "type": "aoai"
+        },
+        "name": "NS 検索要約 (AOAI GPT-3.5-16K & E3large)",
+        "order_code": 433,
+        "promptPostfix_default": "（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+        "promptPrefix_default": "",
+        "query_engine_config": {
+          "similarity_cutoff": 0.2,
+          "similarity_top_k": 3
+        },
+        "rsng": "query",
+        "show_gui_query_chart": false,
+        "show_gui_query_hfb": true,
+        "show_gui_query_ref": true,
+        "show_gui_query_table": false,
+        "show_gui_question_complete": false,
+        "vecdb_embed_dim": 3072,
+        "vecdb_table_name": "t_rag_cont_emb_{}",
+        "tag": "ns_news_aoai_e3large_gpt35_16k_api_0515"
+      },
+      "sys_response": null,
+      "rsng_flow": null
+    }
+  ]
+]

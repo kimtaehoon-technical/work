@@ -1,0 +1,694 @@
+[
+  [
+    {
+      "log_id": "9139ba5e-59fe-43fc-8658-856a34afe2f0",
+      "active": false,
+      "created_at": "2024-07-07T22:58:17.132891+09:00",
+      "updated_at": null,
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": null,
+      "user_query": "テーブル一覧を洗い出してください。",
+      "sys_response_text": "The given reference does not contain the information requested in the question.",
+      "sys_response_ref": [],
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embedding",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": true,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": false,
+          "show_gui_query_table": true,
+          "show_gui_question_complete": false
+        },
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 1536,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "ld_dwh_deployment": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "tag": "ai_ld_dwh_db_spider_car1"
+        },
+        "name": "DWH - Spider - Car1",
+        "order_code": 10,
+        "query_engine_config": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "similarity_cutoff": 0.75,
+          "similarity_top_k": 3
+        },
+        "rsng": "agent_dwh",
+        "rsng_flow": [
+          "tabQuery",
+          "query"
+        ],
+        "tag": "dwh_bedrock_titan_text2_spider_car1"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "ld_dwh_deployment": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "tag": "ai_ld_dwh_db_spider_car1"
+          },
+          "query_engine_config": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "similarity_cutoff": 0.75,
+            "similarity_top_k": 3
+          },
+          "rsng": "agent_dwh"
+        },
+        "rsng_query_input": "Please reply to the following question by referring to the given reference: \r\n\r\nQuestion:\r\nテーブル一覧を洗い出してください。\r\n\r\nReference (in CSV format):\r\n﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT\r\ndef,mysql,columns_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Column privileges\r\ndef,mysql,component,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,1,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC,Components\r\ndef,mysql,db,BASE TABLE,InnoDB,10,Dynamic,3,5461,16384,0,16384,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Database privileges\r\ndef,mysql,default_roles,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Default roles\r\ndef,mysql,engine_cost,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,func,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User defined functions\r\ndef,mysql,general_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,General log\r\ndef,mysql,global_grants,BASE TABLE,InnoDB,10,Dynamic,108,758,81920,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Extended global grants\r\ndef,mysql,gtid_executed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_unicode_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,help_category,BASE TABLE,InnoDB,10,Dynamic,53,309,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help categories\r\ndef,mysql,help_keyword,BASE TABLE,InnoDB,10,Dynamic,990,132,131072,0,131072,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help keywords\r\ndef,mysql,help_relation,BASE TABLE,InnoDB,10,Dynamic,1502,65,98304,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,keyword-topic relation\r\ndef,mysql,help_topic,BASE TABLE,InnoDB,10,Dynamic,437,3636,1589248,0,98304,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help topics\r\ndef,mysql,innodb_index_stats,BASE TABLE,InnoDB,10,Dynamic,435,301,131072,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,innodb_table_stats,BASE TABLE,InnoDB,10,Dynamic,91,180,16384,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,ndb_binlog_index,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,latin1_swedish_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,password_history,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Password history for user accounts\r\ndef,mysql,plugin,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL plugins\r\ndef,mysql,procs_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Procedure privileges\r\ndef,mysql,proxies_priv,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User proxy privileges\r\ndef,mysql,replication_asynchronous_connection_failover,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The source configuration details\r\ndef,mysql,replication_asynchronous_connection_failover_managed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The managed source configuration details\r\ndef,mysql,replication_group_configuration_version,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The group configuration version.\r\ndef,mysql,replication_group_member_actions,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The member actions configuration.\r\ndef,mysql,role_edges,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:53,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Role hierarchy and role grants\r\ndef,mysql,server_cost,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,servers,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL Foreign Servers table\r\ndef,mysql,slave_master_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Master Information\r\ndef,mysql,slave_relay_log_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Relay Log Information\r\ndef,mysql,slave_worker_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Worker Information\r\ndef,mysql,slow_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,Slow log\r\ndef,mysql,tables_priv,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Table privileges\r\ndef,mysql,time_zone,BASE TABLE,InnoDB,10,Dynamic,1826,44,81920,0,0,4194304,1790,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zones\r\ndef,mysql,time_zone_leap_second,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Leap seconds information for time zones\r\ndef,mysql,time_zone_name,BASE TABLE,InnoDB,10,Dynamic,1628,150,245760,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone names\r\ndef,mysql,time_zone_transition,BASE TABLE,InnoDB,10,Dynamic,122161,38,4734976,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transitions\r\ndef,mysql,time_zone_transition_type,BASE TABLE,InnoDB,10,Dynamic,10529,45,475136,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transition types\r\ndef,mysql,user,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Users and global privileges\r\ndef,information_schema,ADMINISTRABLE_ROLE_AUTHORIZATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,APPLICABLE_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,CHARACTER_SETS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,CHECK_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATION_CHARACTER_SET_APPLICABILITY,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_STATISTICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ENABLED_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ENGINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,EVENTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,FILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE_LRU,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_POOL_STATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CACHED_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_DATAFILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FIELDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN_COLS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FT_BEING_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_CONFIG,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DEFAULT_STOPWORD,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_CACHE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_TABLE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_METRICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_SESSION_TEMP_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES_BRIEF,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_TABLESTATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TEMP_TABLE_INFO,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TRX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_VIRTUAL,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,KEYWORDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,KEY_COLUMN_USAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,OPTIMIZER_TRACE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARAMETERS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARTITIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PLUGINS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROCESSLIST,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROFILING,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,REFERENTIAL_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,RESOURCE_GROUPS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ROLE_COLUMN_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_ROUTINE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_TABLE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROUTINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMA_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\n",
+        "rsng_query_result": {
+          "text": "The given reference does not contain the information requested in the question.",
+          "additional_kwargs": {},
+          "raw": {
+            "id": "chatcmpl-9iMh6DL0QEjUJXaBjgcqw1aJICglM",
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "content": "The given reference does not contain the information requested in the question.",
+                  "role": "assistant",
+                  "function_call": null,
+                  "tool_calls": null
+                }
+              }
+            ],
+            "created": 1720360696,
+            "model": "gpt-35-turbo-16k",
+            "object": "chat.completion",
+            "system_fingerprint": null,
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 5249,
+              "total_tokens": 5262
+            }
+          },
+          "logprobs": null,
+          "delta": null
+        },
+        "exec_time_delta": 0.467537
+      }
+    },
+    {
+      "log_id": "9139ba5e-59fe-43fc-8658-856a34afe2f1",
+      "active": false,
+      "created_at": "2024-07-07T22:48:17.132891+09:00",
+      "updated_at": null,
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": null,
+      "user_query": "家族確認書類とはどのようなものですか？［家族割引サービスおうち割 でんきセット（A）おうち割。",
+      "sys_response_text": "The given reference does not contain the information requested in the question.",
+      "sys_response_ref": [],
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embedding",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": true,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": false,
+          "show_gui_query_table": true,
+          "show_gui_question_complete": false
+        },
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 1536,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "ld_dwh_deployment": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "tag": "ai_ld_dwh_db_spider_car1"
+        },
+        "name": "DWH - Spider - Car1",
+        "order_code": 10,
+        "query_engine_config": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "similarity_cutoff": 0.75,
+          "similarity_top_k": 3
+        },
+        "rsng": "agent_dwh",
+        "rsng_flow": [
+          "tabQuery",
+          "query"
+        ],
+        "tag": "dwh_bedrock_titan_text2_spider_car1"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "ld_dwh_deployment": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "tag": "ai_ld_dwh_db_spider_car1"
+          },
+          "query_engine_config": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "similarity_cutoff": 0.75,
+            "similarity_top_k": 3
+          },
+          "rsng": "agent_dwh"
+        },
+        "rsng_query_input": "Please reply to the following question by referring to the given reference: \r\n\r\nQuestion:\r\nテーブル一覧を洗い出してください。\r\n\r\nReference (in CSV format):\r\n﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT\r\ndef,mysql,columns_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Column privileges\r\ndef,mysql,component,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,1,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC,Components\r\ndef,mysql,db,BASE TABLE,InnoDB,10,Dynamic,3,5461,16384,0,16384,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Database privileges\r\ndef,mysql,default_roles,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Default roles\r\ndef,mysql,engine_cost,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,func,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User defined functions\r\ndef,mysql,general_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,General log\r\ndef,mysql,global_grants,BASE TABLE,InnoDB,10,Dynamic,108,758,81920,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Extended global grants\r\ndef,mysql,gtid_executed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_unicode_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,help_category,BASE TABLE,InnoDB,10,Dynamic,53,309,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help categories\r\ndef,mysql,help_keyword,BASE TABLE,InnoDB,10,Dynamic,990,132,131072,0,131072,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help keywords\r\ndef,mysql,help_relation,BASE TABLE,InnoDB,10,Dynamic,1502,65,98304,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,keyword-topic relation\r\ndef,mysql,help_topic,BASE TABLE,InnoDB,10,Dynamic,437,3636,1589248,0,98304,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help topics\r\ndef,mysql,innodb_index_stats,BASE TABLE,InnoDB,10,Dynamic,435,301,131072,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,innodb_table_stats,BASE TABLE,InnoDB,10,Dynamic,91,180,16384,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,ndb_binlog_index,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,latin1_swedish_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,password_history,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Password history for user accounts\r\ndef,mysql,plugin,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL plugins\r\ndef,mysql,procs_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Procedure privileges\r\ndef,mysql,proxies_priv,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User proxy privileges\r\ndef,mysql,replication_asynchronous_connection_failover,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The source configuration details\r\ndef,mysql,replication_asynchronous_connection_failover_managed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The managed source configuration details\r\ndef,mysql,replication_group_configuration_version,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The group configuration version.\r\ndef,mysql,replication_group_member_actions,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The member actions configuration.\r\ndef,mysql,role_edges,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:53,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Role hierarchy and role grants\r\ndef,mysql,server_cost,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,servers,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL Foreign Servers table\r\ndef,mysql,slave_master_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Master Information\r\ndef,mysql,slave_relay_log_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Relay Log Information\r\ndef,mysql,slave_worker_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Worker Information\r\ndef,mysql,slow_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,Slow log\r\ndef,mysql,tables_priv,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Table privileges\r\ndef,mysql,time_zone,BASE TABLE,InnoDB,10,Dynamic,1826,44,81920,0,0,4194304,1790,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zones\r\ndef,mysql,time_zone_leap_second,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Leap seconds information for time zones\r\ndef,mysql,time_zone_name,BASE TABLE,InnoDB,10,Dynamic,1628,150,245760,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone names\r\ndef,mysql,time_zone_transition,BASE TABLE,InnoDB,10,Dynamic,122161,38,4734976,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transitions\r\ndef,mysql,time_zone_transition_type,BASE TABLE,InnoDB,10,Dynamic,10529,45,475136,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transition types\r\ndef,mysql,user,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Users and global privileges\r\ndef,information_schema,ADMINISTRABLE_ROLE_AUTHORIZATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,APPLICABLE_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,CHARACTER_SETS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,CHECK_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATION_CHARACTER_SET_APPLICABILITY,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_STATISTICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ENABLED_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ENGINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,EVENTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,FILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE_LRU,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_POOL_STATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CACHED_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_DATAFILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FIELDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN_COLS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FT_BEING_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_CONFIG,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DEFAULT_STOPWORD,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_CACHE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_TABLE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_METRICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_SESSION_TEMP_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES_BRIEF,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_TABLESTATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TEMP_TABLE_INFO,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TRX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_VIRTUAL,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,KEYWORDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,KEY_COLUMN_USAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,OPTIMIZER_TRACE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARAMETERS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARTITIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PLUGINS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROCESSLIST,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROFILING,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,REFERENTIAL_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,RESOURCE_GROUPS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ROLE_COLUMN_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_ROUTINE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_TABLE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROUTINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMA_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\n",
+        "rsng_query_result": {
+          "text": "The given reference does not contain the information requested in the question.",
+          "additional_kwargs": {},
+          "raw": {
+            "id": "chatcmpl-9iMh6DL0QEjUJXaBjgcqw1aJICglM",
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "content": "The given reference does not contain the information requested in the question.",
+                  "role": "assistant",
+                  "function_call": null,
+                  "tool_calls": null
+                }
+              }
+            ],
+            "created": 1720360696,
+            "model": "gpt-35-turbo-16k",
+            "object": "chat.completion",
+            "system_fingerprint": null,
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 5249,
+              "total_tokens": 5262
+            }
+          },
+          "logprobs": null,
+          "delta": null
+        },
+        "exec_time_delta": 0.467537
+      }
+    },
+    {
+      "log_id": "9139ba5e-59fe-43fc-8658-856a34afe2f2",
+      "active": false,
+      "created_at": "2024-07-07T22:38:17.132891+09:00",
+      "updated_at": null,
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": null,
+      "user_query": "宅急便は、コンビニや取扱店から出すことはできますか？",
+      "sys_response_text": "The given reference does not contain the information requested in the question.",
+      "sys_response_ref": [],
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embedding",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": true,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": false,
+          "show_gui_query_table": true,
+          "show_gui_question_complete": false
+        },
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 1536,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "ld_dwh_deployment": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "tag": "ai_ld_dwh_db_spider_car1"
+        },
+        "name": "DWH - Spider - Car1",
+        "order_code": 10,
+        "query_engine_config": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "similarity_cutoff": 0.75,
+          "similarity_top_k": 3
+        },
+        "rsng": "agent_dwh",
+        "rsng_flow": [
+          "tabQuery",
+          "query"
+        ],
+        "tag": "dwh_bedrock_titan_text2_spider_car1"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "ld_dwh_deployment": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "tag": "ai_ld_dwh_db_spider_car1"
+          },
+          "query_engine_config": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "similarity_cutoff": 0.75,
+            "similarity_top_k": 3
+          },
+          "rsng": "agent_dwh"
+        },
+        "rsng_query_input": "Please reply to the following question by referring to the given reference: \r\n\r\nQuestion:\r\nテーブル一覧を洗い出してください。\r\n\r\nReference (in CSV format):\r\n﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT\r\ndef,mysql,columns_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Column privileges\r\ndef,mysql,component,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,1,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC,Components\r\ndef,mysql,db,BASE TABLE,InnoDB,10,Dynamic,3,5461,16384,0,16384,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Database privileges\r\ndef,mysql,default_roles,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Default roles\r\ndef,mysql,engine_cost,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,func,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User defined functions\r\ndef,mysql,general_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,General log\r\ndef,mysql,global_grants,BASE TABLE,InnoDB,10,Dynamic,108,758,81920,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Extended global grants\r\ndef,mysql,gtid_executed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_unicode_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,help_category,BASE TABLE,InnoDB,10,Dynamic,53,309,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help categories\r\ndef,mysql,help_keyword,BASE TABLE,InnoDB,10,Dynamic,990,132,131072,0,131072,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help keywords\r\ndef,mysql,help_relation,BASE TABLE,InnoDB,10,Dynamic,1502,65,98304,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,keyword-topic relation\r\ndef,mysql,help_topic,BASE TABLE,InnoDB,10,Dynamic,437,3636,1589248,0,98304,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help topics\r\ndef,mysql,innodb_index_stats,BASE TABLE,InnoDB,10,Dynamic,435,301,131072,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,innodb_table_stats,BASE TABLE,InnoDB,10,Dynamic,91,180,16384,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,ndb_binlog_index,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,latin1_swedish_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,password_history,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Password history for user accounts\r\ndef,mysql,plugin,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL plugins\r\ndef,mysql,procs_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Procedure privileges\r\ndef,mysql,proxies_priv,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User proxy privileges\r\ndef,mysql,replication_asynchronous_connection_failover,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The source configuration details\r\ndef,mysql,replication_asynchronous_connection_failover_managed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The managed source configuration details\r\ndef,mysql,replication_group_configuration_version,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The group configuration version.\r\ndef,mysql,replication_group_member_actions,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The member actions configuration.\r\ndef,mysql,role_edges,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:53,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Role hierarchy and role grants\r\ndef,mysql,server_cost,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,servers,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL Foreign Servers table\r\ndef,mysql,slave_master_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Master Information\r\ndef,mysql,slave_relay_log_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Relay Log Information\r\ndef,mysql,slave_worker_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Worker Information\r\ndef,mysql,slow_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,Slow log\r\ndef,mysql,tables_priv,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Table privileges\r\ndef,mysql,time_zone,BASE TABLE,InnoDB,10,Dynamic,1826,44,81920,0,0,4194304,1790,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zones\r\ndef,mysql,time_zone_leap_second,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Leap seconds information for time zones\r\ndef,mysql,time_zone_name,BASE TABLE,InnoDB,10,Dynamic,1628,150,245760,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone names\r\ndef,mysql,time_zone_transition,BASE TABLE,InnoDB,10,Dynamic,122161,38,4734976,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transitions\r\ndef,mysql,time_zone_transition_type,BASE TABLE,InnoDB,10,Dynamic,10529,45,475136,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transition types\r\ndef,mysql,user,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Users and global privileges\r\ndef,information_schema,ADMINISTRABLE_ROLE_AUTHORIZATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,APPLICABLE_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,CHARACTER_SETS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,CHECK_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATION_CHARACTER_SET_APPLICABILITY,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_STATISTICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ENABLED_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ENGINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,EVENTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,FILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE_LRU,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_POOL_STATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CACHED_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_DATAFILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FIELDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN_COLS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FT_BEING_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_CONFIG,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DEFAULT_STOPWORD,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_CACHE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_TABLE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_METRICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_SESSION_TEMP_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES_BRIEF,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_TABLESTATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TEMP_TABLE_INFO,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TRX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_VIRTUAL,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,KEYWORDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,KEY_COLUMN_USAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,OPTIMIZER_TRACE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARAMETERS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARTITIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PLUGINS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROCESSLIST,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROFILING,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,REFERENTIAL_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,RESOURCE_GROUPS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ROLE_COLUMN_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_ROUTINE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_TABLE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROUTINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMA_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\n",
+        "rsng_query_result": {
+          "text": "The given reference does not contain the information requested in the question.",
+          "additional_kwargs": {},
+          "raw": {
+            "id": "chatcmpl-9iMh6DL0QEjUJXaBjgcqw1aJICglM",
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "content": "The given reference does not contain the information requested in the question.",
+                  "role": "assistant",
+                  "function_call": null,
+                  "tool_calls": null
+                }
+              }
+            ],
+            "created": 1720360696,
+            "model": "gpt-35-turbo-16k",
+            "object": "chat.completion",
+            "system_fingerprint": null,
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 5249,
+              "total_tokens": 5262
+            }
+          },
+          "logprobs": null,
+          "delta": null
+        },
+        "exec_time_delta": 0.467537
+      }
+    },
+    {
+      "log_id": "9139ba5e-59fe-43fc-8658-856a34afe233",
+      "active": false,
+      "created_at": "2024-07-06T22:58:17.132891+09:00",
+      "updated_at": null,
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": null,
+      "user_query": "システムの稼動準備にはどの程度の時間がかかりますか?",
+      "sys_response_text": "The given reference does not contain the information requested in the question.",
+      "sys_response_ref": [],
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embedding",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": true,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": false,
+          "show_gui_query_table": true,
+          "show_gui_question_complete": false
+        },
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 1536,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "ld_dwh_deployment": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "tag": "ai_ld_dwh_db_spider_car1"
+        },
+        "name": "DWH - Spider - Car1",
+        "order_code": 10,
+        "query_engine_config": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "similarity_cutoff": 0.75,
+          "similarity_top_k": 3
+        },
+        "rsng": "agent_dwh",
+        "rsng_flow": [
+          "tabQuery",
+          "query"
+        ],
+        "tag": "dwh_bedrock_titan_text2_spider_car1"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "ld_dwh_deployment": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "tag": "ai_ld_dwh_db_spider_car1"
+          },
+          "query_engine_config": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "similarity_cutoff": 0.75,
+            "similarity_top_k": 3
+          },
+          "rsng": "agent_dwh"
+        },
+        "rsng_query_input": "Please reply to the following question by referring to the given reference: \r\n\r\nQuestion:\r\nテーブル一覧を洗い出してください。\r\n\r\nReference (in CSV format):\r\n﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT\r\ndef,mysql,columns_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Column privileges\r\ndef,mysql,component,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,1,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC,Components\r\ndef,mysql,db,BASE TABLE,InnoDB,10,Dynamic,3,5461,16384,0,16384,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Database privileges\r\ndef,mysql,default_roles,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Default roles\r\ndef,mysql,engine_cost,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,func,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User defined functions\r\ndef,mysql,general_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,General log\r\ndef,mysql,global_grants,BASE TABLE,InnoDB,10,Dynamic,108,758,81920,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Extended global grants\r\ndef,mysql,gtid_executed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_unicode_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,help_category,BASE TABLE,InnoDB,10,Dynamic,53,309,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help categories\r\ndef,mysql,help_keyword,BASE TABLE,InnoDB,10,Dynamic,990,132,131072,0,131072,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help keywords\r\ndef,mysql,help_relation,BASE TABLE,InnoDB,10,Dynamic,1502,65,98304,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,keyword-topic relation\r\ndef,mysql,help_topic,BASE TABLE,InnoDB,10,Dynamic,437,3636,1589248,0,98304,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help topics\r\ndef,mysql,innodb_index_stats,BASE TABLE,InnoDB,10,Dynamic,435,301,131072,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,innodb_table_stats,BASE TABLE,InnoDB,10,Dynamic,91,180,16384,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,ndb_binlog_index,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,latin1_swedish_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,password_history,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Password history for user accounts\r\ndef,mysql,plugin,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL plugins\r\ndef,mysql,procs_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Procedure privileges\r\ndef,mysql,proxies_priv,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User proxy privileges\r\ndef,mysql,replication_asynchronous_connection_failover,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The source configuration details\r\ndef,mysql,replication_asynchronous_connection_failover_managed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The managed source configuration details\r\ndef,mysql,replication_group_configuration_version,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The group configuration version.\r\ndef,mysql,replication_group_member_actions,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The member actions configuration.\r\ndef,mysql,role_edges,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:53,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Role hierarchy and role grants\r\ndef,mysql,server_cost,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,servers,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL Foreign Servers table\r\ndef,mysql,slave_master_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Master Information\r\ndef,mysql,slave_relay_log_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Relay Log Information\r\ndef,mysql,slave_worker_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Worker Information\r\ndef,mysql,slow_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,Slow log\r\ndef,mysql,tables_priv,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Table privileges\r\ndef,mysql,time_zone,BASE TABLE,InnoDB,10,Dynamic,1826,44,81920,0,0,4194304,1790,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zones\r\ndef,mysql,time_zone_leap_second,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Leap seconds information for time zones\r\ndef,mysql,time_zone_name,BASE TABLE,InnoDB,10,Dynamic,1628,150,245760,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone names\r\ndef,mysql,time_zone_transition,BASE TABLE,InnoDB,10,Dynamic,122161,38,4734976,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transitions\r\ndef,mysql,time_zone_transition_type,BASE TABLE,InnoDB,10,Dynamic,10529,45,475136,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transition types\r\ndef,mysql,user,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Users and global privileges\r\ndef,information_schema,ADMINISTRABLE_ROLE_AUTHORIZATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,APPLICABLE_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,CHARACTER_SETS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,CHECK_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATION_CHARACTER_SET_APPLICABILITY,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_STATISTICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ENABLED_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ENGINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,EVENTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,FILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE_LRU,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_POOL_STATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CACHED_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_DATAFILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FIELDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN_COLS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FT_BEING_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_CONFIG,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DEFAULT_STOPWORD,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_CACHE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_TABLE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_METRICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_SESSION_TEMP_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES_BRIEF,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_TABLESTATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TEMP_TABLE_INFO,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TRX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_VIRTUAL,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,KEYWORDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,KEY_COLUMN_USAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,OPTIMIZER_TRACE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARAMETERS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARTITIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PLUGINS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROCESSLIST,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROFILING,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,REFERENTIAL_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,RESOURCE_GROUPS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ROLE_COLUMN_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_ROUTINE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_TABLE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROUTINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMA_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\n",
+        "rsng_query_result": {
+          "text": "The given reference does not contain the information requested in the question.",
+          "additional_kwargs": {},
+          "raw": {
+            "id": "chatcmpl-9iMh6DL0QEjUJXaBjgcqw1aJICglM",
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "content": "The given reference does not contain the information requested in the question.",
+                  "role": "assistant",
+                  "function_call": null,
+                  "tool_calls": null
+                }
+              }
+            ],
+            "created": 1720360696,
+            "model": "gpt-35-turbo-16k",
+            "object": "chat.completion",
+            "system_fingerprint": null,
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 5249,
+              "total_tokens": 5262
+            }
+          },
+          "logprobs": null,
+          "delta": null
+        },
+        "exec_time_delta": 0.467537
+      }
+    },
+    {
+      "log_id": "9139ba5e-59fe-43fc-9658-856a34afe2f0",
+      "active": false,
+      "created_at": "2024-07-06T21:58:17.132891+09:00",
+      "updated_at": null,
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": null,
+      "user_query": "複数口専用の送り状の書き方を教えてください。",
+      "sys_response_text": "The given reference does not contain the information requested in the question.",
+      "sys_response_ref": [],
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embedding",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": true,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": false,
+          "show_gui_query_table": true,
+          "show_gui_question_complete": false
+        },
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 1536,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "ld_dwh_deployment": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "tag": "ai_ld_dwh_db_spider_car1"
+        },
+        "name": "DWH - Spider - Car1",
+        "order_code": 10,
+        "query_engine_config": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "similarity_cutoff": 0.75,
+          "similarity_top_k": 3
+        },
+        "rsng": "agent_dwh",
+        "rsng_flow": [
+          "tabQuery",
+          "query"
+        ],
+        "tag": "dwh_bedrock_titan_text2_spider_car1"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "ld_dwh_deployment": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "tag": "ai_ld_dwh_db_spider_car1"
+          },
+          "query_engine_config": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "similarity_cutoff": 0.75,
+            "similarity_top_k": 3
+          },
+          "rsng": "agent_dwh"
+        },
+        "rsng_query_input": "Please reply to the following question by referring to the given reference: \r\n\r\nQuestion:\r\nテーブル一覧を洗い出してください。\r\n\r\nReference (in CSV format):\r\n﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT\r\ndef,mysql,columns_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Column privileges\r\ndef,mysql,component,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,1,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC,Components\r\ndef,mysql,db,BASE TABLE,InnoDB,10,Dynamic,3,5461,16384,0,16384,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Database privileges\r\ndef,mysql,default_roles,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Default roles\r\ndef,mysql,engine_cost,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,func,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User defined functions\r\ndef,mysql,general_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,General log\r\ndef,mysql,global_grants,BASE TABLE,InnoDB,10,Dynamic,108,758,81920,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Extended global grants\r\ndef,mysql,gtid_executed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_unicode_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,help_category,BASE TABLE,InnoDB,10,Dynamic,53,309,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help categories\r\ndef,mysql,help_keyword,BASE TABLE,InnoDB,10,Dynamic,990,132,131072,0,131072,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help keywords\r\ndef,mysql,help_relation,BASE TABLE,InnoDB,10,Dynamic,1502,65,98304,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,keyword-topic relation\r\ndef,mysql,help_topic,BASE TABLE,InnoDB,10,Dynamic,437,3636,1589248,0,98304,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help topics\r\ndef,mysql,innodb_index_stats,BASE TABLE,InnoDB,10,Dynamic,435,301,131072,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,innodb_table_stats,BASE TABLE,InnoDB,10,Dynamic,91,180,16384,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,ndb_binlog_index,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,latin1_swedish_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,password_history,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Password history for user accounts\r\ndef,mysql,plugin,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL plugins\r\ndef,mysql,procs_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Procedure privileges\r\ndef,mysql,proxies_priv,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User proxy privileges\r\ndef,mysql,replication_asynchronous_connection_failover,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The source configuration details\r\ndef,mysql,replication_asynchronous_connection_failover_managed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The managed source configuration details\r\ndef,mysql,replication_group_configuration_version,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The group configuration version.\r\ndef,mysql,replication_group_member_actions,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The member actions configuration.\r\ndef,mysql,role_edges,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:53,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Role hierarchy and role grants\r\ndef,mysql,server_cost,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,servers,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL Foreign Servers table\r\ndef,mysql,slave_master_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Master Information\r\ndef,mysql,slave_relay_log_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Relay Log Information\r\ndef,mysql,slave_worker_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Worker Information\r\ndef,mysql,slow_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,Slow log\r\ndef,mysql,tables_priv,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Table privileges\r\ndef,mysql,time_zone,BASE TABLE,InnoDB,10,Dynamic,1826,44,81920,0,0,4194304,1790,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zones\r\ndef,mysql,time_zone_leap_second,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Leap seconds information for time zones\r\ndef,mysql,time_zone_name,BASE TABLE,InnoDB,10,Dynamic,1628,150,245760,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone names\r\ndef,mysql,time_zone_transition,BASE TABLE,InnoDB,10,Dynamic,122161,38,4734976,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transitions\r\ndef,mysql,time_zone_transition_type,BASE TABLE,InnoDB,10,Dynamic,10529,45,475136,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transition types\r\ndef,mysql,user,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Users and global privileges\r\ndef,information_schema,ADMINISTRABLE_ROLE_AUTHORIZATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,APPLICABLE_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,CHARACTER_SETS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,CHECK_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATION_CHARACTER_SET_APPLICABILITY,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_STATISTICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ENABLED_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ENGINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,EVENTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,FILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE_LRU,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_POOL_STATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CACHED_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_DATAFILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FIELDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN_COLS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FT_BEING_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_CONFIG,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DEFAULT_STOPWORD,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_CACHE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_TABLE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_METRICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_SESSION_TEMP_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES_BRIEF,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_TABLESTATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TEMP_TABLE_INFO,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TRX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_VIRTUAL,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,KEYWORDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,KEY_COLUMN_USAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,OPTIMIZER_TRACE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARAMETERS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARTITIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PLUGINS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROCESSLIST,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROFILING,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,REFERENTIAL_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,RESOURCE_GROUPS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ROLE_COLUMN_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_ROUTINE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_TABLE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROUTINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMA_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\n",
+        "rsng_query_result": {
+          "text": "The given reference does not contain the information requested in the question.",
+          "additional_kwargs": {},
+          "raw": {
+            "id": "chatcmpl-9iMh6DL0QEjUJXaBjgcqw1aJICglM",
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "content": "The given reference does not contain the information requested in the question.",
+                  "role": "assistant",
+                  "function_call": null,
+                  "tool_calls": null
+                }
+              }
+            ],
+            "created": 1720360696,
+            "model": "gpt-35-turbo-16k",
+            "object": "chat.completion",
+            "system_fingerprint": null,
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 5249,
+              "total_tokens": 5262
+            }
+          },
+          "logprobs": null,
+          "delta": null
+        },
+        "exec_time_delta": 0.467537
+      }
+    },
+    {
+      "log_id": "9139ba5e-59fe-43fc-8658-856a34afe2f0",
+      "active": false,
+      "created_at": "2024-07-06T22:58:23.132891+09:00",
+      "updated_at": null,
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": null,
+      "user_query": "AIは人間の仕事を奪うのではないかと心配する人がいますが、その点についてどう考えますか",
+      "sys_response_text": "The given reference does not contain the information requested in the question.",
+      "sys_response_ref": [],
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embedding",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_35_turbo_16k",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": true,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": false,
+          "show_gui_query_table": true,
+          "show_gui_question_complete": false
+        },
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 1536,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "ld_dwh_deployment": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "tag": "ai_ld_dwh_db_spider_car1"
+        },
+        "name": "DWH - Spider - Car1",
+        "order_code": 10,
+        "query_engine_config": {
+          "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+          "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+          "similarity_cutoff": 0.75,
+          "similarity_top_k": 3
+        },
+        "rsng": "agent_dwh",
+        "rsng_flow": [
+          "tabQuery",
+          "query"
+        ],
+        "tag": "dwh_bedrock_titan_text2_spider_car1"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "ld_dwh_deployment": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "tag": "ai_ld_dwh_db_spider_car1"
+          },
+          "query_engine_config": {
+            "promptPostfix_default": "If there is not limit to the query result yet, please limit the query result no more than 10000 records. Makesure the SQL is executable.",
+            "promptPrefix_default": "Please generate oneline executable SQL code by referring to the following question or instruction:",
+            "similarity_cutoff": 0.75,
+            "similarity_top_k": 3
+          },
+          "rsng": "agent_dwh"
+        },
+        "rsng_query_input": "Please reply to the following question by referring to the given reference: \r\n\r\nQuestion:\r\nテーブル一覧を洗い出してください。\r\n\r\nReference (in CSV format):\r\n﻿TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,VERSION,ROW_FORMAT,TABLE_ROWS,AVG_ROW_LENGTH,DATA_LENGTH,MAX_DATA_LENGTH,INDEX_LENGTH,DATA_FREE,AUTO_INCREMENT,CREATE_TIME,UPDATE_TIME,CHECK_TIME,TABLE_COLLATION,CHECKSUM,CREATE_OPTIONS,TABLE_COMMENT\r\ndef,mysql,columns_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Column privileges\r\ndef,mysql,component,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,1,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC,Components\r\ndef,mysql,db,BASE TABLE,InnoDB,10,Dynamic,3,5461,16384,0,16384,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Database privileges\r\ndef,mysql,default_roles,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Default roles\r\ndef,mysql,engine_cost,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,func,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User defined functions\r\ndef,mysql,general_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,General log\r\ndef,mysql,global_grants,BASE TABLE,InnoDB,10,Dynamic,108,758,81920,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Extended global grants\r\ndef,mysql,gtid_executed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_unicode_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,help_category,BASE TABLE,InnoDB,10,Dynamic,53,309,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help categories\r\ndef,mysql,help_keyword,BASE TABLE,InnoDB,10,Dynamic,990,132,131072,0,131072,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help keywords\r\ndef,mysql,help_relation,BASE TABLE,InnoDB,10,Dynamic,1502,65,98304,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,keyword-topic relation\r\ndef,mysql,help_topic,BASE TABLE,InnoDB,10,Dynamic,437,3636,1589248,0,98304,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,help topics\r\ndef,mysql,innodb_index_stats,BASE TABLE,InnoDB,10,Dynamic,435,301,131072,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,innodb_table_stats,BASE TABLE,InnoDB,10,Dynamic,91,180,16384,0,0,4194304,,2024-01-30T06:56:49,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,ndb_binlog_index,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,latin1_swedish_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,password_history,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:54,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Password history for user accounts\r\ndef,mysql,plugin,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL plugins\r\ndef,mysql,procs_priv,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Procedure privileges\r\ndef,mysql,proxies_priv,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,User proxy privileges\r\ndef,mysql,replication_asynchronous_connection_failover,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The source configuration details\r\ndef,mysql,replication_asynchronous_connection_failover_managed,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,The managed source configuration details\r\ndef,mysql,replication_group_configuration_version,BASE TABLE,InnoDB,10,Dynamic,1,16384,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The group configuration version.\r\ndef,mysql,replication_group_member_actions,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:56,,,utf8mb4_0900_ai_ci,,row_format=DYNAMIC stats_persistent=0,The member actions configuration.\r\ndef,mysql,role_edges,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:53,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Role hierarchy and role grants\r\ndef,mysql,server_cost,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,\r\ndef,mysql,servers,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:55,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,MySQL Foreign Servers table\r\ndef,mysql,slave_master_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Master Information\r\ndef,mysql,slave_relay_log_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Relay Log Information\r\ndef,mysql,slave_worker_info,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Worker Information\r\ndef,mysql,slow_log,BASE TABLE,CSV,10,Dynamic,2,0,0,0,0,0,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,,Slow log\r\ndef,mysql,tables_priv,BASE TABLE,InnoDB,10,Dynamic,2,8192,16384,0,16384,4194304,,2024-01-30T15:56:55,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Table privileges\r\ndef,mysql,time_zone,BASE TABLE,InnoDB,10,Dynamic,1826,44,81920,0,0,4194304,1790,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zones\r\ndef,mysql,time_zone_leap_second,BASE TABLE,InnoDB,10,Dynamic,0,0,16384,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Leap seconds information for time zones\r\ndef,mysql,time_zone_name,BASE TABLE,InnoDB,10,Dynamic,1628,150,245760,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone names\r\ndef,mysql,time_zone_transition,BASE TABLE,InnoDB,10,Dynamic,122161,38,4734976,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transitions\r\ndef,mysql,time_zone_transition_type,BASE TABLE,InnoDB,10,Dynamic,10529,45,475136,0,0,4194304,,2024-01-30T15:56:56,,,utf8mb3_general_ci,,row_format=DYNAMIC stats_persistent=0,Time zone transition types\r\ndef,mysql,user,BASE TABLE,InnoDB,10,Dynamic,6,2730,16384,0,0,4194304,,2024-01-30T15:56:52,,,utf8mb3_bin,,row_format=DYNAMIC stats_persistent=0,Users and global privileges\r\ndef,information_schema,ADMINISTRABLE_ROLE_AUTHORIZATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,APPLICABLE_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,CHARACTER_SETS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,CHECK_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLLATION_CHARACTER_SET_APPLICABILITY,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMNS_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,COLUMN_STATISTICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ENABLED_ROLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ENGINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,EVENTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,FILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_PAGE_LRU,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_BUFFER_POOL_STATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CACHED_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMPMEM_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_PER_INDEX_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_CMP_RESET,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_COLUMNS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_DATAFILES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FIELDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FOREIGN_COLS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_FT_BEING_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_CONFIG,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DEFAULT_STOPWORD,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_DELETED,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_CACHE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_FT_INDEX_TABLE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_INDEXES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_METRICS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_SESSION_TEMP_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TABLESPACES_BRIEF,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,INNODB_TABLESTATS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TEMP_TABLE_INFO,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_TRX,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,INNODB_VIRTUAL,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:57:00,,,,,,\r\ndef,information_schema,KEYWORDS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,KEY_COLUMN_USAGE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,OPTIMIZER_TRACE,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARAMETERS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PARTITIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PLUGINS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROCESSLIST,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,PROFILING,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,REFERENTIAL_CONSTRAINTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,RESOURCE_GROUPS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,ROLE_COLUMN_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_ROUTINE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROLE_TABLE_GRANTS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:57,,,,,,\r\ndef,information_schema,ROUTINES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMATA_EXTENSIONS,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\ndef,information_schema,SCHEMA_PRIVILEGES,SYSTEM VIEW,,10,,0,0,0,0,0,0,,2024-01-30T15:56:51,,,,,,\r\n",
+        "rsng_query_result": {
+          "text": "The given reference does not contain the information requested in the question.",
+          "additional_kwargs": {},
+          "raw": {
+            "id": "chatcmpl-9iMh6DL0QEjUJXaBjgcqw1aJICglM",
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "content": "The given reference does not contain the information requested in the question.",
+                  "role": "assistant",
+                  "function_call": null,
+                  "tool_calls": null
+                }
+              }
+            ],
+            "created": 1720360696,
+            "model": "gpt-35-turbo-16k",
+            "object": "chat.completion",
+            "system_fingerprint": null,
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 5249,
+              "total_tokens": 5262
+            }
+          },
+          "logprobs": null,
+          "delta": null
+        },
+        "exec_time_delta": 0.467537
+      }
+    }
+  ]
+]

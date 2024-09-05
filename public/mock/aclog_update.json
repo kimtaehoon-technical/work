@@ -1,0 +1,867 @@
+[
+  [
+    {
+      "log_id": "7d258481-79b7-4a85-8931-8e89f97bcfcf",
+      "active": true,
+      "created_at": "2024-07-23T11:30:49.139646+09:00",
+      "updated_at": "2024-07-23T11:32:07.217512+09:00",
+      "api_user_code": "pkutech_bot",
+      "app_user_code": "user_id",
+      "eval_hfb": {
+        "eval_hfb_fidelity": 5,
+        "eval_hfb_comment": "手続きに関する苦情と問い合わせ窓口に関する苦情が分けているので、良いと思います。"
+      },
+      "user_query": "苦情の内容を要約してください。",
+      "sys_response_text": "- 手続きに関する苦情：\r\n  - 必要な書類が多すぎて時間と労力がかかる\r\n  - 書類取得に時間がかかり急を要する時に不便\r\n  - 記載内容が細かくミスで再提出が必要\r\n  - 手続きが遅れる\r\n  - 提出方法が煩雑\r\n  - オンラインでの全ての書類提出を希望\r\n\r\n- 問い合わせ窓口に関する苦情：\r\n  - 電話の待ち時間が長い\r\n  - 担当者の回答に一貫性がない\r\n  - メールの返信が遅い\r\n  - 迅速な対応を求める場面でストレス\r\n  - 高齢者やインターネット不慣れな方々に分かりやすくすることを希望",
+      "sys_response_ref": [
+        {
+          "node": {
+            "id_": "ae6298cc-a158-4392-a177-c6bd78817d0c",
+            "embedding": null,
+            "metadata": {
+              "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+              "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+              "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+              "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+              "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+            },
+            "excluded_embed_metadata_keys": [],
+            "excluded_llm_metadata_keys": [],
+            "relationships": {
+              "1": {
+                "node_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                "node_type": "4",
+                "metadata": {
+                  "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt"
+                },
+                "hash": "50d60c329670a2bef3f50d94f02ef56b64b0ebbe4d8c209f02e21c5f6022c0b5"
+              }
+            },
+            "text": "手続きに非常に不満\n\n必要な書類が多すぎる\n\n書類を揃えるのが困難\n\n時間と労力がかかる\n\n書類取得に時間がかかり急を要する時不便\n\n記載内容が細かくミスで再提出\n\n手続きが遅れる\n\n提出方法が煩雑\n\nオンライン手続きが一部対応\n\n多くは郵送で提出\n\n郵送料や手続きの時間が無駄\n\nオンラインでの全ての書類提出を希望\n\n問い合わせ窓口の対応に不満\n\n電話の待ち時間が長い\n\n担当者の回答に一貫性がない\n\n不明点解消まで時間がかかる\n\nメールの返信が遅い\n\n迅速な対応を求める場面でストレス\n\n書類の簡略化とデジタル化を希望\n\n手続きの迅速化を希望\n\n問い合わせ窓口の強化を希望\n\n必要書類の種類を減らすことを希望\n\nオンラインでの完全提出を希望\n\n書類提出後の審査や支払いプロセスの見直しを希望\n\n迅速な対応体制を整えることを希望\n\n電話やメールの問い合わせの迅速かつ的確な対応を希望\n\n担当者の研修強化を希望\n\n高齢者やインターネット不慣れな方々に分かりやすくすることを希望\n\n郵送手続きの煩雑さや時間の無駄を解消することを希望\n\n迅速かつ効率的な対応を希望\n\n問い合わせ窓口の強化を希望\n\n待ち時間短縮や担当者研修強化を希望\n\n顧客対応の質向上を希望\n\n迅速かつ的確な対応で不安やストレスを軽減することを希望\n\n満足度の高いサービスを期待\n\n問題の早急解決を希望",
+            "start_char_idx": 0,
+            "end_char_idx": 583,
+            "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+            "metadata_template": "{key}: {value}",
+            "metadata_seperator": "\n"
+          },
+          "score": 0.49035683331747637
+        },
+        {
+          "node": {
+            "id_": "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5",
+            "embedding": null,
+            "metadata": {
+              "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+              "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+              "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+              "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+            },
+            "excluded_embed_metadata_keys": [],
+            "excluded_llm_metadata_keys": [],
+            "relationships": {
+              "1": {
+                "node_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                "node_type": "4",
+                "metadata": {
+                  "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                },
+                "hash": "6f333960f8b18dd8d8b6f494fc335b01519f031c3c87df1a6393ea62af967841"
+              },
+              "2": {
+                "node_id": "c34e98e8-7cf8-42b8-9786-958b1435e71a",
+                "node_type": "1",
+                "metadata": {
+                  "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                },
+                "hash": "abd2cf88943f12d997cdc6aadbb5a106eae3b2f3365fecf484f67a29da69a06e"
+              }
+            },
+            "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+            "start_char_idx": 806,
+            "end_char_idx": 863,
+            "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+            "metadata_template": "{key}: {value}",
+            "metadata_seperator": "\n"
+          },
+          "score": 0.47317326708477325
+        },
+        {
+          "node": {
+            "id_": "0847cd12-c390-4ba3-9f33-8eed1e116d5f",
+            "embedding": null,
+            "metadata": {
+              "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+              "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+              "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+              "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+            },
+            "excluded_embed_metadata_keys": [],
+            "excluded_llm_metadata_keys": [],
+            "relationships": {
+              "1": {
+                "node_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                "node_type": "4",
+                "metadata": {
+                  "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                },
+                "hash": "13ea8364f4c2ea819db1c328e24a9c15569810d35994383fd90e35e88248c0f6"
+              },
+              "2": {
+                "node_id": "89ef7687-fe5f-4d8c-9921-3bfa1c144b99",
+                "node_type": "1",
+                "metadata": {
+                  "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                },
+                "hash": "e24aa0115ee8e5c32be95865e60e95e91e7174ad0fef1acb58adfca33680c600"
+              }
+            },
+            "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+            "start_char_idx": 806,
+            "end_char_idx": 863,
+            "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+            "metadata_template": "{key}: {value}",
+            "metadata_seperator": "\n"
+          },
+          "score": 0.45426819818778075
+        }
+      ],
+      "deployment_tag": "ns_news_aoai_e3large__gpt4_0613_api_1201",
+      "deployment_conf": {
+        "active": true,
+        "deployment_embedding_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_embed_3large1",
+          "type": "aoai"
+        },
+        "deployment_llm_config": {
+          "api_version": "2023-05-15",
+          "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+          "name": "rag_demo_aoai_gpt_4_0613",
+          "temperature": 0,
+          "type": "aoai"
+        },
+        "gui_component_config": {
+          "show_gui_query_chart": false,
+          "show_gui_query_hfb": true,
+          "show_gui_query_ref": true,
+          "show_gui_query_table": false,
+          "show_gui_question_complete": false
+        },
+        "iets_engine_config": [
+          "iets_default_document_title",
+          "iets_default_document_summary",
+          "iets_default_customer_profile",
+          "iets_default_document_complete",
+          "iets_default_document_complete_with_enumeration",
+          "iets_default_document_important_content_summary_or_extraction",
+          "iets_default_document_request"
+        ],
+        "indexing_storage_config": {
+          "docdb_database_name": "db_rag_dev_pku_{}",
+          "vecdb_embed_dim": 3072,
+          "vecdb_table_name": "t_rag_cont_emb_{}"
+        },
+        "ingestion_config": {
+          "DigestionMethod": "default_digestion_method",
+          "IngestionMethod": "default_extract_files",
+          "IngestionPipeline_num_workers": 1,
+          "SentenceSplitter_chunk_overlap": 20,
+          "SentenceSplitter_chunk_size": 1024,
+          "type": "aoai"
+        },
+        "name": "【DOC】NSデモ 要約・グルーピング・分類（Advanced）",
+        "order_code": 434,
+        "query_engine_config": {
+          "promptPostfix_default": "",
+          "promptPrefix_default": "",
+          "similarity_cutoff": 0.2,
+          "similarity_top_k": 3
+        },
+        "rsng": "query",
+        "sythesize_engine_config": {
+          "promptPostfix_default": "（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+          "promptPrefix_default": ""
+        },
+        "tag": "ns_news_aoai_e3large__gpt4_0613_api_1201"
+      },
+      "sys_response": {
+        "rsng_deployment": {
+          "query_engine_config": {
+            "promptPostfix_default": "",
+            "promptPrefix_default": "",
+            "similarity_cutoff": 0.2,
+            "similarity_top_k": 3
+          },
+          "rsng": "query"
+        },
+        "rsng_query_input": "\r\n\r\n\r\n\r\n\r\n\r\n苦情の内容を要約してください。\r\n\r\n\r\n\r\n（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+        "rsng_query_result": {
+          "response": "- 手続きに関する苦情：\n  - 必要な書類が多すぎて時間と労力がかかる\n  - 書類取得に時間がかかり急を要する時に不便\n  - 記載内容が細かくミスで再提出が必要\n  - 手続きが遅れる\n  - 提出方法が煩雑\n  - オンラインでの全ての書類提出を希望\n\n- 問い合わせ窓口に関する苦情：\n  - 電話の待ち時間が長い\n  - 担当者の回答に一貫性がない\n  - メールの返信が遅い\n  - 迅速な対応を求める場面でストレス\n  - 高齢者やインターネット不慣れな方々に分かりやすくすることを希望",
+          "source_nodes": [
+            {
+              "node": {
+                "id_": "ae6298cc-a158-4392-a177-c6bd78817d0c",
+                "embedding": null,
+                "metadata": {
+                  "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+                  "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+                  "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+                },
+                "excluded_embed_metadata_keys": [],
+                "excluded_llm_metadata_keys": [],
+                "relationships": {
+                  "1": {
+                    "node_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                    "node_type": "4",
+                    "metadata": {
+                      "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt"
+                    },
+                    "hash": "50d60c329670a2bef3f50d94f02ef56b64b0ebbe4d8c209f02e21c5f6022c0b5"
+                  }
+                },
+                "text": "手続きに非常に不満\n\n必要な書類が多すぎる\n\n書類を揃えるのが困難\n\n時間と労力がかかる\n\n書類取得に時間がかかり急を要する時不便\n\n記載内容が細かくミスで再提出\n\n手続きが遅れる\n\n提出方法が煩雑\n\nオンライン手続きが一部対応\n\n多くは郵送で提出\n\n郵送料や手続きの時間が無駄\n\nオンラインでの全ての書類提出を希望\n\n問い合わせ窓口の対応に不満\n\n電話の待ち時間が長い\n\n担当者の回答に一貫性がない\n\n不明点解消まで時間がかかる\n\nメールの返信が遅い\n\n迅速な対応を求める場面でストレス\n\n書類の簡略化とデジタル化を希望\n\n手続きの迅速化を希望\n\n問い合わせ窓口の強化を希望\n\n必要書類の種類を減らすことを希望\n\nオンラインでの完全提出を希望\n\n書類提出後の審査や支払いプロセスの見直しを希望\n\n迅速な対応体制を整えることを希望\n\n電話やメールの問い合わせの迅速かつ的確な対応を希望\n\n担当者の研修強化を希望\n\n高齢者やインターネット不慣れな方々に分かりやすくすることを希望\n\n郵送手続きの煩雑さや時間の無駄を解消することを希望\n\n迅速かつ効率的な対応を希望\n\n問い合わせ窓口の強化を希望\n\n待ち時間短縮や担当者研修強化を希望\n\n顧客対応の質向上を希望\n\n迅速かつ的確な対応で不安やストレスを軽減することを希望\n\n満足度の高いサービスを期待\n\n問題の早急解決を希望",
+                "start_char_idx": 0,
+                "end_char_idx": 583,
+                "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                "metadata_template": "{key}: {value}",
+                "metadata_seperator": "\n"
+              },
+              "score": 0.49035683331747637
+            },
+            {
+              "node": {
+                "id_": "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5",
+                "embedding": null,
+                "metadata": {
+                  "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+                  "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+                },
+                "excluded_embed_metadata_keys": [],
+                "excluded_llm_metadata_keys": [],
+                "relationships": {
+                  "1": {
+                    "node_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                    "node_type": "4",
+                    "metadata": {
+                      "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                    },
+                    "hash": "6f333960f8b18dd8d8b6f494fc335b01519f031c3c87df1a6393ea62af967841"
+                  },
+                  "2": {
+                    "node_id": "c34e98e8-7cf8-42b8-9786-958b1435e71a",
+                    "node_type": "1",
+                    "metadata": {
+                      "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                    },
+                    "hash": "abd2cf88943f12d997cdc6aadbb5a106eae3b2f3365fecf484f67a29da69a06e"
+                  }
+                },
+                "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+                "start_char_idx": 806,
+                "end_char_idx": 863,
+                "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                "metadata_template": "{key}: {value}",
+                "metadata_seperator": "\n"
+              },
+              "score": 0.47317326708477325
+            },
+            {
+              "node": {
+                "id_": "0847cd12-c390-4ba3-9f33-8eed1e116d5f",
+                "embedding": null,
+                "metadata": {
+                  "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+                  "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+                },
+                "excluded_embed_metadata_keys": [],
+                "excluded_llm_metadata_keys": [],
+                "relationships": {
+                  "1": {
+                    "node_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                    "node_type": "4",
+                    "metadata": {
+                      "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                    },
+                    "hash": "13ea8364f4c2ea819db1c328e24a9c15569810d35994383fd90e35e88248c0f6"
+                  },
+                  "2": {
+                    "node_id": "89ef7687-fe5f-4d8c-9921-3bfa1c144b99",
+                    "node_type": "1",
+                    "metadata": {
+                      "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                    },
+                    "hash": "e24aa0115ee8e5c32be95865e60e95e91e7174ad0fef1acb58adfca33680c600"
+                  }
+                },
+                "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+                "start_char_idx": 806,
+                "end_char_idx": 863,
+                "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                "metadata_template": "{key}: {value}",
+                "metadata_seperator": "\n"
+              },
+              "score": 0.45426819818778075
+            }
+          ],
+          "metadata": {
+            "ae6298cc-a158-4392-a177-c6bd78817d0c": {
+              "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+              "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+              "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+              "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+              "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+            },
+            "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5": {
+              "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+              "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+              "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+              "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+            },
+            "0847cd12-c390-4ba3-9f33-8eed1e116d5f": {
+              "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+              "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+              "uploaded_file_name": null,
+              "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+              "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+              "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+            }
+          },
+          "text": "- 手続きに関する苦情：\n  - 必要な書類が多すぎて時間と労力がかかる\n  - 書類取得に時間がかかり急を要する時に不便\n  - 記載内容が細かくミスで再提出が必要\n  - 手続きが遅れる\n  - 提出方法が煩雑\n  - オンラインでの全ての書類提出を希望\n\n- 問い合わせ窓口に関する苦情：\n  - 電話の待ち時間が長い\n  - 担当者の回答に一貫性がない\n  - メールの返信が遅い\n  - 迅速な対応を求める場面でストレス\n  - 高齢者やインターネット不慣れな方々に分かりやすくすることを希望"
+        },
+        "exec_time_delta": 10.877914
+      },
+      "rsng_flow": {
+        "query": {
+          "user_query": "苦情の内容を要約してください。",
+          "deployment_conf": {
+            "active": true,
+            "deployment_embedding_config": {
+              "api_version": "2023-05-15",
+              "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+              "name": "rag_demo_aoai_embed_3large1",
+              "type": "aoai"
+            },
+            "deployment_llm_config": {
+              "api_version": "2023-05-15",
+              "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+              "name": "rag_demo_aoai_gpt_4_0613",
+              "temperature": 0,
+              "type": "aoai"
+            },
+            "gui_component_config": {
+              "show_gui_query_chart": false,
+              "show_gui_query_hfb": true,
+              "show_gui_query_ref": true,
+              "show_gui_query_table": false,
+              "show_gui_question_complete": false
+            },
+            "iets_engine_config": [
+              "iets_default_document_title",
+              "iets_default_document_summary",
+              "iets_default_customer_profile",
+              "iets_default_document_complete",
+              "iets_default_document_complete_with_enumeration",
+              "iets_default_document_important_content_summary_or_extraction",
+              "iets_default_document_request"
+            ],
+            "indexing_storage_config": {
+              "docdb_database_name": "db_rag_dev_pku_{}",
+              "vecdb_embed_dim": 3072,
+              "vecdb_table_name": "t_rag_cont_emb_{}"
+            },
+            "ingestion_config": {
+              "DigestionMethod": "default_digestion_method",
+              "IngestionMethod": "default_extract_files",
+              "IngestionPipeline_num_workers": 1,
+              "SentenceSplitter_chunk_overlap": 20,
+              "SentenceSplitter_chunk_size": 1024,
+              "type": "aoai"
+            },
+            "name": "【DOC】NSデモ 要約・グルーピング・分類（Advanced）",
+            "order_code": 434,
+            "query_engine_config": {
+              "promptPostfix_default": "",
+              "promptPrefix_default": "",
+              "similarity_cutoff": 0.2,
+              "similarity_top_k": 3
+            },
+            "rsng": "query",
+            "sythesize_engine_config": {
+              "promptPostfix_default": "（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+              "promptPrefix_default": ""
+            },
+            "tag": "ns_news_aoai_e3large__gpt4_0613_api_1201"
+          },
+          "sys_response": {
+            "rsng_deployment": {
+              "query_engine_config": {
+                "promptPostfix_default": "",
+                "promptPrefix_default": "",
+                "similarity_cutoff": 0.2,
+                "similarity_top_k": 3
+              },
+              "rsng": "query"
+            },
+            "rsng_query_input": "\r\n\r\n\r\n苦情の内容を要約してください。\r\n\r\n",
+            "rsng_query_result": {
+              "response": "",
+              "source_nodes": [
+                {
+                  "node": {
+                    "id_": "ae6298cc-a158-4392-a177-c6bd78817d0c",
+                    "embedding": null,
+                    "metadata": {
+                      "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                      "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+                      "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+                      "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+                    },
+                    "excluded_embed_metadata_keys": [],
+                    "excluded_llm_metadata_keys": [],
+                    "relationships": {
+                      "1": {
+                        "node_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                        "node_type": "4",
+                        "metadata": {
+                          "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt"
+                        },
+                        "hash": "50d60c329670a2bef3f50d94f02ef56b64b0ebbe4d8c209f02e21c5f6022c0b5"
+                      }
+                    },
+                    "text": "手続きに非常に不満\n\n必要な書類が多すぎる\n\n書類を揃えるのが困難\n\n時間と労力がかかる\n\n書類取得に時間がかかり急を要する時不便\n\n記載内容が細かくミスで再提出\n\n手続きが遅れる\n\n提出方法が煩雑\n\nオンライン手続きが一部対応\n\n多くは郵送で提出\n\n郵送料や手続きの時間が無駄\n\nオンラインでの全ての書類提出を希望\n\n問い合わせ窓口の対応に不満\n\n電話の待ち時間が長い\n\n担当者の回答に一貫性がない\n\n不明点解消まで時間がかかる\n\nメールの返信が遅い\n\n迅速な対応を求める場面でストレス\n\n書類の簡略化とデジタル化を希望\n\n手続きの迅速化を希望\n\n問い合わせ窓口の強化を希望\n\n必要書類の種類を減らすことを希望\n\nオンラインでの完全提出を希望\n\n書類提出後の審査や支払いプロセスの見直しを希望\n\n迅速な対応体制を整えることを希望\n\n電話やメールの問い合わせの迅速かつ的確な対応を希望\n\n担当者の研修強化を希望\n\n高齢者やインターネット不慣れな方々に分かりやすくすることを希望\n\n郵送手続きの煩雑さや時間の無駄を解消することを希望\n\n迅速かつ効率的な対応を希望\n\n問い合わせ窓口の強化を希望\n\n待ち時間短縮や担当者研修強化を希望\n\n顧客対応の質向上を希望\n\n迅速かつ的確な対応で不安やストレスを軽減することを希望\n\n満足度の高いサービスを期待\n\n問題の早急解決を希望",
+                    "start_char_idx": 0,
+                    "end_char_idx": 583,
+                    "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                    "metadata_template": "{key}: {value}",
+                    "metadata_seperator": "\n"
+                  },
+                  "score": 0.49035683331747637
+                },
+                {
+                  "node": {
+                    "id_": "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5",
+                    "embedding": null,
+                    "metadata": {
+                      "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                      "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+                      "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+                    },
+                    "excluded_embed_metadata_keys": [],
+                    "excluded_llm_metadata_keys": [],
+                    "relationships": {
+                      "1": {
+                        "node_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                        "node_type": "4",
+                        "metadata": {
+                          "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                        },
+                        "hash": "6f333960f8b18dd8d8b6f494fc335b01519f031c3c87df1a6393ea62af967841"
+                      },
+                      "2": {
+                        "node_id": "c34e98e8-7cf8-42b8-9786-958b1435e71a",
+                        "node_type": "1",
+                        "metadata": {
+                          "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                        },
+                        "hash": "abd2cf88943f12d997cdc6aadbb5a106eae3b2f3365fecf484f67a29da69a06e"
+                      }
+                    },
+                    "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+                    "start_char_idx": 806,
+                    "end_char_idx": 863,
+                    "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                    "metadata_template": "{key}: {value}",
+                    "metadata_seperator": "\n"
+                  },
+                  "score": 0.47317326708477325
+                },
+                {
+                  "node": {
+                    "id_": "0847cd12-c390-4ba3-9f33-8eed1e116d5f",
+                    "embedding": null,
+                    "metadata": {
+                      "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                      "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+                      "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+                    },
+                    "excluded_embed_metadata_keys": [],
+                    "excluded_llm_metadata_keys": [],
+                    "relationships": {
+                      "1": {
+                        "node_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                        "node_type": "4",
+                        "metadata": {
+                          "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                        },
+                        "hash": "13ea8364f4c2ea819db1c328e24a9c15569810d35994383fd90e35e88248c0f6"
+                      },
+                      "2": {
+                        "node_id": "89ef7687-fe5f-4d8c-9921-3bfa1c144b99",
+                        "node_type": "1",
+                        "metadata": {
+                          "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                        },
+                        "hash": "e24aa0115ee8e5c32be95865e60e95e91e7174ad0fef1acb58adfca33680c600"
+                      }
+                    },
+                    "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+                    "start_char_idx": 806,
+                    "end_char_idx": 863,
+                    "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                    "metadata_template": "{key}: {value}",
+                    "metadata_seperator": "\n"
+                  },
+                  "score": 0.45426819818778075
+                }
+              ],
+              "metadata": {
+                "ae6298cc-a158-4392-a177-c6bd78817d0c": {
+                  "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+                  "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+                  "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+                },
+                "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5": {
+                  "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+                  "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+                },
+                "0847cd12-c390-4ba3-9f33-8eed1e116d5f": {
+                  "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+                  "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+                }
+              }
+            },
+            "exec_time_delta": 1.004694
+          }
+        },
+        "complete": {
+          "user_query": "\r\n\r\n\r\n\r\n\r\n\r\n苦情の内容を要約してください。\r\n\r\n\r\n\r\n（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+          "deployment_conf": {
+            "active": true,
+            "deployment_embedding_config": {
+              "api_version": "2023-05-15",
+              "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+              "name": "rag_demo_aoai_embed_3large1",
+              "type": "aoai"
+            },
+            "deployment_llm_config": {
+              "api_version": "2023-05-15",
+              "endpoint": "https://aoai-pkutech-rag.openai.azure.com",
+              "name": "rag_demo_aoai_gpt_4_0613",
+              "temperature": 0,
+              "type": "aoai"
+            },
+            "gui_component_config": {
+              "show_gui_query_chart": false,
+              "show_gui_query_hfb": true,
+              "show_gui_query_ref": true,
+              "show_gui_query_table": false,
+              "show_gui_question_complete": false
+            },
+            "iets_engine_config": [
+              "iets_default_document_title",
+              "iets_default_document_summary",
+              "iets_default_customer_profile",
+              "iets_default_document_complete",
+              "iets_default_document_complete_with_enumeration",
+              "iets_default_document_important_content_summary_or_extraction",
+              "iets_default_document_request"
+            ],
+            "indexing_storage_config": {
+              "docdb_database_name": "db_rag_dev_pku_{}",
+              "vecdb_embed_dim": 3072,
+              "vecdb_table_name": "t_rag_cont_emb_{}"
+            },
+            "ingestion_config": {
+              "DigestionMethod": "default_digestion_method",
+              "IngestionMethod": "default_extract_files",
+              "IngestionPipeline_num_workers": 1,
+              "SentenceSplitter_chunk_overlap": 20,
+              "SentenceSplitter_chunk_size": 1024,
+              "type": "aoai"
+            },
+            "name": "【DOC】NSデモ 要約・グルーピング・分類（Advanced）",
+            "order_code": 434,
+            "query_engine_config": {
+              "promptPostfix_default": "",
+              "promptPrefix_default": "",
+              "similarity_cutoff": 0.2,
+              "similarity_top_k": 3
+            },
+            "rsng": "query",
+            "sythesize_engine_config": {
+              "promptPostfix_default": "（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+              "promptPrefix_default": ""
+            },
+            "tag": "ns_news_aoai_e3large__gpt4_0613_api_1201"
+          },
+          "sys_response": {
+            "rsng_deployment": {
+              "query_engine_config": {
+                "promptPostfix_default": "",
+                "promptPrefix_default": "",
+                "similarity_cutoff": 0.2,
+                "similarity_top_k": 3
+              },
+              "rsng": "query"
+            },
+            "rsng_query_input": "\r\n\r\n\r\n\r\n\r\n\r\n苦情の内容を要約してください。\r\n\r\n\r\n\r\n（回答内容にコード以外の部分を日本語で及びMarkdown記法の箇条書き形式で整形してください。）",
+            "rsng_query_result": {
+              "response": "- 手続きに関する苦情：\n  - 必要な書類が多すぎて時間と労力がかかる\n  - 書類取得に時間がかかり急を要する時に不便\n  - 記載内容が細かくミスで再提出が必要\n  - 手続きが遅れる\n  - 提出方法が煩雑\n  - オンラインでの全ての書類提出を希望\n\n- 問い合わせ窓口に関する苦情：\n  - 電話の待ち時間が長い\n  - 担当者の回答に一貫性がない\n  - メールの返信が遅い\n  - 迅速な対応を求める場面でストレス\n  - 高齢者やインターネット不慣れな方々に分かりやすくすることを希望",
+              "source_nodes": [
+                {
+                  "node": {
+                    "id_": "ae6298cc-a158-4392-a177-c6bd78817d0c",
+                    "embedding": null,
+                    "metadata": {
+                      "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                      "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+                      "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+                      "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+                    },
+                    "excluded_embed_metadata_keys": [],
+                    "excluded_llm_metadata_keys": [],
+                    "relationships": {
+                      "1": {
+                        "node_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                        "node_type": "4",
+                        "metadata": {
+                          "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt"
+                        },
+                        "hash": "50d60c329670a2bef3f50d94f02ef56b64b0ebbe4d8c209f02e21c5f6022c0b5"
+                      }
+                    },
+                    "text": "手続きに非常に不満\n\n必要な書類が多すぎる\n\n書類を揃えるのが困難\n\n時間と労力がかかる\n\n書類取得に時間がかかり急を要する時不便\n\n記載内容が細かくミスで再提出\n\n手続きが遅れる\n\n提出方法が煩雑\n\nオンライン手続きが一部対応\n\n多くは郵送で提出\n\n郵送料や手続きの時間が無駄\n\nオンラインでの全ての書類提出を希望\n\n問い合わせ窓口の対応に不満\n\n電話の待ち時間が長い\n\n担当者の回答に一貫性がない\n\n不明点解消まで時間がかかる\n\nメールの返信が遅い\n\n迅速な対応を求める場面でストレス\n\n書類の簡略化とデジタル化を希望\n\n手続きの迅速化を希望\n\n問い合わせ窓口の強化を希望\n\n必要書類の種類を減らすことを希望\n\nオンラインでの完全提出を希望\n\n書類提出後の審査や支払いプロセスの見直しを希望\n\n迅速な対応体制を整えることを希望\n\n電話やメールの問い合わせの迅速かつ的確な対応を希望\n\n担当者の研修強化を希望\n\n高齢者やインターネット不慣れな方々に分かりやすくすることを希望\n\n郵送手続きの煩雑さや時間の無駄を解消することを希望\n\n迅速かつ効率的な対応を希望\n\n問い合わせ窓口の強化を希望\n\n待ち時間短縮や担当者研修強化を希望\n\n顧客対応の質向上を希望\n\n迅速かつ的確な対応で不安やストレスを軽減することを希望\n\n満足度の高いサービスを期待\n\n問題の早急解決を希望",
+                    "start_char_idx": 0,
+                    "end_char_idx": 583,
+                    "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                    "metadata_template": "{key}: {value}",
+                    "metadata_seperator": "\n"
+                  },
+                  "score": 0.49035683331747637
+                },
+                {
+                  "node": {
+                    "id_": "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5",
+                    "embedding": null,
+                    "metadata": {
+                      "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                      "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+                      "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+                    },
+                    "excluded_embed_metadata_keys": [],
+                    "excluded_llm_metadata_keys": [],
+                    "relationships": {
+                      "1": {
+                        "node_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                        "node_type": "4",
+                        "metadata": {
+                          "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                        },
+                        "hash": "6f333960f8b18dd8d8b6f494fc335b01519f031c3c87df1a6393ea62af967841"
+                      },
+                      "2": {
+                        "node_id": "c34e98e8-7cf8-42b8-9786-958b1435e71a",
+                        "node_type": "1",
+                        "metadata": {
+                          "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt"
+                        },
+                        "hash": "abd2cf88943f12d997cdc6aadbb5a106eae3b2f3365fecf484f67a29da69a06e"
+                      }
+                    },
+                    "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+                    "start_char_idx": 806,
+                    "end_char_idx": 863,
+                    "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                    "metadata_template": "{key}: {value}",
+                    "metadata_seperator": "\n"
+                  },
+                  "score": 0.47317326708477325
+                },
+                {
+                  "node": {
+                    "id_": "0847cd12-c390-4ba3-9f33-8eed1e116d5f",
+                    "embedding": null,
+                    "metadata": {
+                      "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                      "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                      "uploaded_file_name": null,
+                      "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                      "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+                      "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+                    },
+                    "excluded_embed_metadata_keys": [],
+                    "excluded_llm_metadata_keys": [],
+                    "relationships": {
+                      "1": {
+                        "node_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                        "node_type": "4",
+                        "metadata": {
+                          "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                        },
+                        "hash": "13ea8364f4c2ea819db1c328e24a9c15569810d35994383fd90e35e88248c0f6"
+                      },
+                      "2": {
+                        "node_id": "89ef7687-fe5f-4d8c-9921-3bfa1c144b99",
+                        "node_type": "1",
+                        "metadata": {
+                          "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                          "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                          "uploaded_file_name": null,
+                          "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt"
+                        },
+                        "hash": "e24aa0115ee8e5c32be95865e60e95e91e7174ad0fef1acb58adfca33680c600"
+                      }
+                    },
+                    "text": "長年にわたり貴社を信頼し、保険に加入されている顧客として、これらの問題が早急に解決されることを切に願われています。",
+                    "start_char_idx": 806,
+                    "end_char_idx": 863,
+                    "text_template": "[Excerpt from document]\n{metadata_str}\nExcerpt:\n-----\n{content}\n-----\n",
+                    "metadata_template": "{key}: {value}",
+                    "metadata_seperator": "\n"
+                  },
+                  "score": 0.45426819818778075
+                }
+              ],
+              "metadata": {
+                "ae6298cc-a158-4392-a177-c6bd78817d0c": {
+                  "cdoc_id": "f0824e59-16f9-45f4-b06a-cf8d8de10007",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_f0824e59-16f9-45f4-b06a-cf8d8de10007/parsed/0.txt",
+                  "document_title": "\"手続きと問い合わせ窓口の改善提案と不満点の解消に向けた提言\"",
+                  "section_summary": "このセクションでは、手続きと問い合わせ窓口に関する改善提案と不満点が述べられています。具体的には、手続きに関しては、必要な書類が多すぎて時間と労力がかかる、記載内容が細かくミスで再提出が必要になる、提出方法が煩雑であるなどの不満が挙げられています。また、オンラインでの全ての書類提出や、書類の簡略化とデジタル化、手続きの迅速化などの改善提案もされています。\n\n問い合わせ窓口については、電話の待ち時間が長い、担当者の回答に一貫性がない、メールの返信が遅いなどの不満があり、迅速な対応を求める場面でストレスを感じています。また、問い合わせ窓口の強化、担当者の研修強化、待ち時間短縮などの改善提案もされています。\n\n全体として、手続きと問い合わせ窓口の効率化と迅速化、そして顧客対応の質向上を求めていることが伺えます。",
+                  "cdoc_name": "お客様の声メモ（箇条書き）.txt"
+                },
+                "6e68f13f-3eb9-4a36-a58e-51b61ccc4ca5": {
+                  "cdoc_id": "eb1fdca7-1b9d-4193-8ced-394ae840d966",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_eb1fdca7-1b9d-4193-8ced-394ae840d966/parsed/0.txt",
+                  "document_title": "\"顧客の生命保険支払い手続きに関する不満と改善要望への対応策\"",
+                  "section_summary": "このセクションは、長年にわたり保険に加入している顧客が、生命保険の支払い手続きに関する問題の早急な解決を強く望んでいることについて述べています。主なトピックは生命保険の支払い手続きとその問題解決についてであり、主要なエンティティは保険に加入している顧客です。"
+                },
+                "0847cd12-c390-4ba3-9f33-8eed1e116d5f": {
+                  "cdoc_id": "2d37fbf8-c0db-4c73-b126-eef2dca52f07",
+                  "unzipped_basename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "uploaded_file_name": null,
+                  "filename": "data/flow/cdocs/cdoc_2d37fbf8-c0db-4c73-b126-eef2dca52f07/parsed/0.txt",
+                  "document_title": "\"Customer Feedback and Improvement Suggestions on Life Insurance Payment Procedures: Enhancing Trust and Problem Resolution\"",
+                  "section_summary": "このセクションでは、長年にわたり保険に加入している顧客が、問題が早急に解決されることを強く望んでいると述べています。主なトピックは顧客の信頼と問題解決についての改善要望です。"
+                }
+              },
+              "text": "- 手続きに関する苦情：\n  - 必要な書類が多すぎて時間と労力がかかる\n  - 書類取得に時間がかかり急を要する時に不便\n  - 記載内容が細かくミスで再提出が必要\n  - 手続きが遅れる\n  - 提出方法が煩雑\n  - オンラインでの全ての書類提出を希望\n\n- 問い合わせ窓口に関する苦情：\n  - 電話の待ち時間が長い\n  - 担当者の回答に一貫性がない\n  - メールの返信が遅い\n  - 迅速な対応を求める場面でストレス\n  - 高齢者やインターネット不慣れな方々に分かりやすくすることを希望"
+            },
+            "exec_time_delta": 10.877914
+          }
+        }
+      }
+    }
+  ]
+]
