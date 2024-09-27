@@ -4,8 +4,8 @@
       <!-- バージョン情報 -->
       <div class="version_info_class" v-if="fullscreen_mask === related_info_enum.related_info_version_info">
         <div class="version-info-title">バージョン情報</div>
-        <div class="logo-content">PKUTECH</div>
-        <div class="version-number">バージョン 1.1.2</div>
+        <div class="logo-content">DXPRO SOLUTIONS</div>
+        <div class="version-number">バージョン 1.1.1</div>
         <svg @click="close_div" class="close-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path
               d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
@@ -32,10 +32,12 @@
     </div>
     <div class="content-container">
       <div class="logo-container">
-        <img class="svg-container" :style="{ marginTop: logo_margin_top, width: logo_width, height: logo_height }" :src=logo_icon alt="Logo Image" />
+        <img class="svg-container" :style="{ marginTop: logo_margin_top, width: '300px', height: '70px' }" :src=logo_icon alt="Logo Image" />
       </div>
-      <div class="login-bg-container" :style="{ marginTop: login_background_margin_top, width: login_background_width, height: login_background_height }">
+      <div class="login-bg-container" :style="{ marginTop: login_background_margin_top, width: '500px', height: '250px' }">
         <div class="logo-title" :style="{ marginTop: logo_title_margin_top, fontSize: logo_font_size_demo }"> {{ login_title_content }}</div>
+        <div class="logo-sub-title" :style="{ fontSize: '15px', marginTop: '20px' }"> {{ login_subtitle_content }}</div>
+        <div class="logo-resub-title" :style="{ fontSize: '12px', marginTop: '5px' }"> {{ login_resubtitle_content }}</div>
         <div class="service-name-login" :style="{ marginTop: service_margin_top, fontSize: service_font_size }"> {{ service_title_login }}</div>
         <div class="login-button-container" @click="login_click" :style="{ marginTop: login_button_container_margin_top, width: login_button, height: login_button_container_height }">
           {{ login_button_content }}
@@ -53,7 +55,7 @@ import { ref, onBeforeMount, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { login_bg_color } from '../logic/config/color_config'
 
-import logo_icon from '@/assets/logo.svg'
+import logo_icon from '@/assets/logo_dx.png'
 import password_icon from '@/assets/password.svg'
 import enter_icon from '@/assets/enter.svg'
 
@@ -111,13 +113,15 @@ const logo_margin_top = ref(`0px`)
 const login_background_width = ref(`0px`)
 const login_background_height = ref(`0px`)
 const login_background_margin_top = ref(`0px`)
-const login_title_content = ref('Egeria - Search')
+const login_title_content = ref('IT - IS')
+const login_subtitle_content = ref('生成型検索ツールで業務をより迅速かつ確実にサポートします')
+const login_resubtitle_content = ref('あなたのビジネスの成功を加速させるパートナー「IT-IS」です。')
 const logo_title_margin_top = ref(`0px`)
 const logo_font_size = ref(`0px`)
 const logo_font_size_demo = ref(`0px`)
 const service_margin_top = ref(`0px`)
 const service_font_size = ref(`0px`)
-const service_title_login = ref('ようこそ')
+const service_title_login = ref('')
 const login_input_container_width = ref(`0px`)
 const login_input_container_height = ref(`0px`)
 const login_input_container_margin_top = ref(`0px`)
@@ -143,7 +147,7 @@ const forget_password_info = ref(`パスワードを忘れた場合`)
 const forget_password_enter_icon_len = ref(`0px`)
 const company_font_size = ref(`0px`)
 const company_bottom = ref(`0px`)
-const company_title = ref('Copyright ©2024 PKUTECH Co.,Ltd.')
+const company_title = ref('Copyright ©2024 DXPRO SOLUTIONS Co.,Ltd.')
 
 const show_password = ref(false)
 const fullscreen_mask = ref(related_info_enum.related_info_no)
@@ -312,17 +316,7 @@ const toggle_visible_password_click = () => {
 
 
 const login_click = async () => {
-  const access_token_data: user_login = await user_login_api.login({ "api_user_id": "pkutech_bot", "api_user_pass": "Pie2eiNo", "app_user_id": "user_id" })
-  console.log(access_token_data)
-  if (response_ok == access_token_data.code) {
-    console.log(access_token_data.data.access_token)
-    access_token.config(access_token_data.data!.access_token)
-    menu_status_util.config_menu_status(menu_enum.appear_status)
-    localStorage.setItem('access_token_key', access_token_data.data.access_token);
     router.push('/')
-  } else {
-    alert(access_token_data.detail)
-  }
   // const authUrl = `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=638604859721735056.MmE0YmRlMjEtOWQxOC00Yzc2LWE2ZWItZGU1Mjg3ODk3ODRmY2FhYzA4NWMtMDQ3Yy00NGY4LTg3ZmMtMWRjZDlkMjA2M2Vl&ui_locales=ja&mkt=ja&client-request-id=f8272b74-4df2-4550-8de7-3a83e2b45a93&state=gsduS6xk2dN4AA65wkp9Bzi5UJK7e1RaltK8-utAkPfbIqQfJKVHBQsz8hkwT2wtkkGQF1E_VXEn7eM37W5TnrzvJacI6X17Ak_ChherBRZ21yDZOXuidZyQK47gROnBK8pYCHoy3xgd7GOF6oyPtWyTxpYVDnkVK_9qZNPX7eo-aM0oex0Xf-ExyFL5SVJ8z0aaCUsaGp9nqt3IpBgxIKrMd4_GRuJ0lVIHJblGQnTe53iJGQe2f4WjSos5ioSd8i4rzYAuQWts24uzBm38HQ&x-client-SKU=ID_NET8_0&x-client-ver=7.5.1.0`;
   // window.location.href = authUrl;
 };
@@ -508,6 +502,14 @@ const close_div = () => {
 .logo-title {
   color: white;
   font-weight: bold;
+}
+
+.logo-sub-title {
+  color: white;
+}
+
+.logo-resub-title {
+  color: white;
 }
 
 .service-name-login {

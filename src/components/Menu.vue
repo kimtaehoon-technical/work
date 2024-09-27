@@ -8,7 +8,7 @@
           <div class="header-content">
             <div class="left-panel">
               <button @click="main_back">
-                <span style="vertical-align: middle; margin-left: 5px; line-height: 1.5; font-Size: 19.5px; ">Egeria - Search</span>
+                <span style="vertical-align: middle; margin-left: 5px;  font-Size: 13px; ">業務サポート【IT - IS】</span>
               </button>
             </div>
             <div class="right-panel">
@@ -661,7 +661,7 @@ button:hover {
   left: 0;
   width: 60px;
   height: 100vh;
-  background-color: #085691;
+  background-color: #2f4f4f;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -670,7 +670,7 @@ button:hover {
 }
 
 .hidden-sidebar-bottom-buttons {
-  background-color: #085691;
+  background-color: #2f4f4f;
   border-top: 1.5px solid white;
   display: flex;
   width: 60px;

@@ -156,7 +156,7 @@ import { menu_enum } from '@/logic/utils/menu_enum'
 import { watch } from 'vue';
 
 // タイトルやUIのサイズを保持するためのrefを定義
-const title = ref('Egeria - Search')
+const title = ref('IT - IS')
 const home_width = ref(`0px`)
 const title_margin_top = ref(`0px`)
 const title_height = ref(`0px`)
@@ -457,12 +457,14 @@ const send_input = async () => {
   isLoading.value = true;
   await nextTick();
   try {
-    const second_answer_data = await answer_api_first.fetch_first_answer({ text: user_message.value });
-    response_message.value = second_answer_data;
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    response_message.value = '<strong>【一次回答のテスト】</strong><br>スマホを機種変更した場合、変更後のスマホで、キー情報の引き継ぎを行ってください。※1操作方法は、[キーの引継ぎ]をご確認ください。動作確認済のスマホ[動作確認済スマートフォン一覧]でのご利用を推奨しております。※1デジタルキーはスマホの標準バックアップ機能に対応しておりません。<br><br><strong>【シェアユーザーが機種変更した場合】</strong><br>シェアキーは引き継ぐことができません。スマホを機種変更した場合、シェアキーは自動で削除されます。（オーナーによるシェアキーの再発行が必要です。）<br>';
+    // const second_answer_data = await answer_api_first.fetch_first_answer({ text: user_message.value });
+    // response_message.value = second_answer_data;
   } catch (error) {
     console.error('Error fetching second answer:', error);
     await new Promise(resolve => setTimeout(resolve, 5000));
-    response_message.value = '<strong>【二次回答のテスト】</strong><br>スマホを機種変更した場合、変更後のスマホで、キー情報の引き継ぎを行ってください。※1操作方法は、[キーの引継ぎ]をご確認ください。動作確認済のスマホ[動作確認済スマートフォン一覧]でのご利用を推奨しております。※1デジタルキーはスマホの標準バックアップ機能に対応しておりません。<br><br><strong>【シェアユーザーが機種変更した場合】</strong><br>シェアキーは引き継ぐことができません。スマホを機種変更した場合、シェアキーは自動で削除されます。（オーナーによるシェアキーの再発行が必要です。）<br>';
+    response_message.value = '<strong>【一次回答のテスト】</strong><br>スマホを機種変更した場合、変更後のスマホで、キー情報の引き継ぎを行ってください。※1操作方法は、[キーの引継ぎ]をご確認ください。動作確認済のスマホ[動作確認済スマートフォン一覧]でのご利用を推奨しております。※1デジタルキーはスマホの標準バックアップ機能に対応しておりません。<br><br><strong>【シェアユーザーが機種変更した場合】</strong><br>シェアキーは引き継ぐことができません。スマホを機種変更した場合、シェアキーは自動で削除されます。（オーナーによるシェアキーの再発行が必要です。）<br>';
   } finally {
     input_value.value = '';
     isLoading.value = false;
@@ -487,8 +489,10 @@ const send_input_reanswer = async () => {
   showFileLink.value = true;
 
   try {
-    const second_answer_data = await answer_api_second.fetch_second_answer({ text: user_message.value });
-    response_second_message.value = second_answer_data;
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    response_second_message.value = '<strong>【二次回答のテスト】</strong><br>スマホを機種変更した場合、変更後のスマホで、キー情報の引き継ぎを行ってください。※1操作方法は、[キーの引継ぎ]をご確認ください。動作確認済のスマホ[動作確認済スマートフォン一覧]でのご利用を推奨しております。※1デジタルキーはスマホの標準バックアップ機能に対応しておりません。<br><br><strong>【シェアユーザーが機種変更した場合】</strong><br>シェアキーは引き継ぐことができません。スマホを機種変更した場合、シェアキーは自動で削除されます。（オーナーによるシェアキーの再発行が必要です。）<br>';
+    // const second_answer_data = await answer_api_second.fetch_second_answer({ text: user_message.value });
+    // response_second_message.value = second_answer_data;
   } catch (error) {
     console.error('Error fetching second answer:', error);
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -517,8 +521,10 @@ const send_input_button_reanswer = async () => {
   showFileLink.value = true;
 
   try {
-    const second_answer_data = await answer_api_second.fetch_second_answer({ text: research_input_value.value });
-    response_second_message.value = second_answer_data;
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    response_message.value = '<strong>【二次回答のテスト】</strong><br>スマホを機種変更した場合、変更後のスマホで、キー情報の引き継ぎを行ってください。※1操作方法は、[キーの引継ぎ]をご確認ください。動作確認済のスマホ[動作確認済スマートフォン一覧]でのご利用を推奨しております。※1デジタルキーはスマホの標準バックアップ機能に対応しておりません。<br><br><strong>【シェアユーザーが機種変更した場合】</strong><br>シェアキーは引き継ぐことができません。スマホを機種変更した場合、シェアキーは自動で削除されます。（オーナーによるシェアキーの再発行が必要です。）<br>';
+    // const second_answer_data = await answer_api_second.fetch_second_answer({ text: research_input_value.value });
+    // response_second_message.value = second_answer_data;
   } catch (error) {
     console.error('Error fetching second answer:', error);
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -555,7 +561,7 @@ const on_show_menu_click = () => {
 }
 
 .main-title {
-  background-color: #053b64;
+  background-color: #558f8f;
   color: #FFFFFF;
   font-size: 13px;
   padding: 3px;

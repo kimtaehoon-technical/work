@@ -13,7 +13,7 @@
           <div class="q-section-header" :style="{ backgroundColor: content_bg_color, height: section_height }">
             <span class="q-section-title" :style="{ fontSize: '13px' }">{{ non_login_title }}</span>
           </div>
-          <div class="input-section" :style="{ height: '120px', marginBottom: input_bottom, width: 'calc(100% - 40px)' }">
+          <div class="input-section" :style="{  marginBottom: input_bottom, width: 'calc(100% - 40px)' }">
             <textarea v-model="input_value" class="input-box" @keyup.enter="send_input"
               :placeholder="input_placeholder"
               :style="{ fontSize: input_font_size }"></textarea>
@@ -83,7 +83,7 @@ import {
 import menu_status_util from '@/logic/utils/menu_status_util'
 import { menu_enum } from '@/logic/utils/menu_enum'
 
-const title = ref('Egeria - Search (デモ)')
+const title = ref('業務サポート：AI検索ツール【IT - IS】')
 const home_width = ref(`0px`)
 const title_margin_top = ref(`0px`)
 const title_height = ref(`0px`)
@@ -115,7 +115,7 @@ const login_height = ref(`0px`)
 const manual_height = ref(`0px`)
 const input_value = ref(``)
 
-const non_login_title = ref(`Egeria - Searchとは? : FAQ(よくあるお問い合わせ集)、マニュアル、過去の問合せ履歴から質問を横断検索します。`)
+const non_login_title = ref(`IT - ISとは? : FAQ(よくあるお問い合わせ集)、マニュアル、過去の問合せ履歴から質問を横断検索します。`)
 const login_title = ref(`登録した問い合わせから探す`)
 const input_placeholder = ref('何を検索しますか?\nEnterで改行')
 const manual_title = ref(`マニュアル更新情報`)
@@ -299,6 +299,7 @@ const send_input = () => {
 .non-login-q-section {
   box-sizing: border-box;
   overflow: auto;
+  height: 500px;
 }
 
 .login-q-section {
@@ -362,6 +363,7 @@ const send_input = () => {
 .input-section {
   display: flex;
   width: 100%;
+  height: 300px;
   align-items: center;
   position: relative;
 }

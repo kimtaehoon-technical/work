@@ -2,7 +2,7 @@
  * カーラ設定についてこと
  */
 const blue = {
-  menu_bg_color: '#085691',
+  menu_bg_color: '#2f4f4f',
   menu_color: '#ffffff',
 }
 
